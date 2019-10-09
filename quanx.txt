@@ -1,0 +1,186 @@
+; 20190926_102324
+
+; 20190925_204114
+
+; 20190925_112320
+
+; 20190722_184124
+
+[general]
+server_check_url= http://www.qualcomm.cn/generate_204
+;geo_location_checker=http://extreme-ip-lookup.com/json/, https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-location-with-script.js
+
+;geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
+
+geo_location_checker=http://ifconfig.co/json,https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IPConfig.js
+
+;network_check_url=http://bing.com/
+;dns_exclusion_list=*.qq.com, qq.com
+;ssid_suspended_list=LINK_22E174, LINK_22E175
+;udp_whitelist=53, 123, 1900, 80-443
+;excluded_routes= 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
+;icmp_auto_reply=true
+
+[dns]
+server=114.114.114.114
+server=202.141.176.93 
+server=202.141.178.13
+server=117.50.10.10
+server=223.5.5.5
+server=119.29.29.29:53
+server=119.28.28.28
+
+server=/*.taobao.com/223.5.5.5
+server=/*.tmall.com/223.5.5.5
+server=/*.alipay.com/223.5.5.5
+server=/*.alicdn.com/223.5.5.5
+server=/*.aliyun.com/223.5.5.5
+server=/*.jd.com/119.28.28.28
+server=/*.qq.com/119.28.28.28
+server=/*.tencent.com/119.28.28.28
+server=/*.weixin.com/119.28.28.28
+server=/*.bilibili.com/119.29.29.29
+server=/hdslb.com/119.29.29.29
+server=/*.163.com/119.29.29.29
+server=/*.126.com/119.29.29.29
+server=/*.126.net/119.29.29.29
+server=/*.127.net/119.29.29.29
+server=/*.netease.com/119.29.29.29
+server=/*.mi.com/119.29.29.29
+server=/*.xiaomi.com/119.29.29.29
+;server=/*testflight.apple.com/23.76.66.98
+;server=8.8.8.8
+;server=/example1.com/8.8.4.4
+;server=/*.example2.com/223.5.5.5
+;server=/example4.com/[2001:4860:4860::8888]:53
+;address=/example5.com/192.168.16.18
+;address=/example6.com/[2001:8d3:8d3:8d3:8d3:8d3:8d3:8d3]
+
+
+#
+# static policy points to the server in candidates you manually selected.
+# available policy points to the first available server in candidates based on server_check_url(concurrent url latency test will be immediately launched when the policy has been triggered and the policy result is unavailable).
+# round-robin policy points to the next server in candidates for next connection.
+# ssid policy points to the server depending on the network environment.
+#
+[policy]
+round-robin=N3ro, IPLC 沪港01, IPLC 沪港02, IPLC 沪港03, IPLC 沪港04, IPLC 沪日01 (2 倍率), IPLC 沪日02 (2 倍率), IPLC 沪韩01 (1.5 倍率), IPLC 沪美01, IPLC 沪美02, IPLC 沪新01, IPLC 深港01, IPLC 深港02, IPLC 深港03, IPLC 深港04, IPLC 深港05, IPLC 深新01, IPLC 深新02, IPLC 川日01 (3 倍率), IPLC 川港01 (2.5 倍率), IPLC 京港01, IPLC 京美01, IPLC 京德01 (1.8 倍率), IPLC 杭港01, IPLC 杭港02, CN2 美西01 (0.3 倍率) #unban, CN2 美西02 (0.3 倍率) #unban, IIJ 日本大阪01 (0.3 倍率) #unban, HINET 台湾01 (0.3 倍率) #unban
+available=Airport, [端口复用] 俄罗斯A RT, [端口复用] 俄罗斯B RT, [端口复用] 俄罗斯C RT, [端口复用] 香港动态 HKT A, [端口复用] 香港动态 HKT B, [端口复用] 香港动态 HKT C, [端口复用] 香港动态 HKT D, [端口复用] 香港动态 HKT E, [端口复用] 香港动态 HKT F, [端口复用] 香港动态 HKT G, [端口复用] 香港动态 HKT H, [端口复用] 香港动态 HKT I, [端口复用] 香港动态 HKT J, [端口复用] 香港动态 HKT K, [端口复用] 香港动态 HKBN A, [端口复用] 香港动态 HKBN B, [端口复用] 香港动态 WTT, 香港TLS1.2食用, [端口复用] 香港 Azure A 10倍, [端口复用] 香港 Azure B 10倍, [端口复用] 香港 Azure C 10倍, [端口复用] 澳门宽频, [端口复用] 美国洛杉矶, [端口复用] 美国流媒体 A, [端口复用] 美国流媒体 B, [端口复用] 美国流媒体 C, [端口复用] 美国流媒体 D, [端口复用] 美国流媒体 E, [端口复用] 美国GIA CN2流媒体 A, [端口复用] 美国GIA CN2流媒体 B, [端口复用] 美国GIA CN2流媒体 C, [端口复用] 美国GIA CN2流媒体 D, [端口复用] 美国GIA CN2流媒体 E, [端口复用] 美国GIA CN2流媒体 F, [端口复用] 日本pccw A, [端口复用] 日本pccw B, [端口复用] 日本 微软A 2.5倍, [端口复用] 日本 微软B 2.5倍, [端口复用] 日本 亚马逊, [端口复用] 韩国 亚马逊, [端口复用] 新加坡 亚马逊, [端口复用] 印度 亚马逊, [端口复用] 新加坡A 微软 2.5倍, [端口复用] 新加坡B 微软 2.5倍, 加拿大, [端口复用] 韩国高速接入A, [端口复用] 台湾高速节点A, [端口复用] 台湾高速节点B, [端口复用] 台湾高速节点C, [端口复用] 台湾高速节点D, [端口复用] 台湾高速节点E, [端口复用] 台湾高速节点F, [端口复用] 台湾高速节点G, [端口复用] 台湾高速节点H, [端口复用] 澳洲, [端口复用] 英国 iplayer A, [端口复用] 英国 iplayer B, [端口复用] 土耳其 特殊, [端口复用] IPV6日本线路 A, [端口复用] IPV6日本线路 B, [端口复用] IPV6美国线路
+static=🇺🇸 US, [端口复用] 美国洛杉矶, [端口复用] 美国流媒体 A, [端口复用] 美国流媒体 B, [端口复用] 美国流媒体 C, [端口复用] 美国流媒体 D, [端口复用] 美国流媒体 E, [端口复用] 美国GIA CN2流媒体 A, [端口复用] 美国GIA CN2流媒体 B, [端口复用] 美国GIA CN2流媒体 C, [端口复用] 美国GIA CN2流媒体 D, [端口复用] 美国GIA CN2流媒体 E, [端口复用] 美国GIA CN2流媒体 F, [端口复用] IPV6美国线路, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/United_States.png
+
+static=🇰🇷 KR, [端口复用] 韩国高速接入A, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Korea.png
+
+static=🇸🇬 SG, [端口复用] 新加坡 亚马逊, [端口复用] 新加坡A 微软 2.5倍, [端口复用] 新加坡B 微软 2.5倍, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Singapore.png
+
+static=🇯🇵 JP, [端口复用] 日本pccw A, [端口复用] 日本pccw B, [端口复用] 日本 微软A 2.5倍, [端口复用] 日本 微软B 2.5倍, [端口复用] 日本 亚马逊, [端口复用] IPV6日本线路 A, [端口复用] IPV6日本线路 B, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Japan.png
+
+static=🇬🇧 UK, [端口复用] 英国 iplayer A, [端口复用] 英国 iplayer B, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/United_Kingdom.png
+
+static=🇭🇰 HK, ss-ws-tls-hk, [端口复用] 香港动态 HKT A, [端口复用] 香港动态 HKT B, [端口复用] 香港动态 HKT C, [端口复用] 香港动态 HKT D, [端口复用] 香港动态 HKT E, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Hong_Kong.png
+
+static=PayPal, direct, proxy, reject, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/PayPal.png
+static=Pornhub, direct, proxy, reject, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Pornhub.png
+static= Spotify, direct, proxy, reject, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Spotify.png
+static=🍎 苹果服务, direct, proxy, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Apple.png
+static=💻 国外影视, proxy, direct, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/ForeignMedia.png
+static=📽 国内视频, direct, proxy, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/DomesticMedia.png
+static=🎬 YouTube, proxy, direct, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/YouTube.png
+static=📺 Netflix, proxy, direct, ss-ws-tls-hk, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Netflix_Letter.png
+static=🌏 国外网站, proxy,direct, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Global.png
+static=🕹 黑/白名单, direct, proxy, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Final.png
+
+
+;static=policy-name-1, Sample-A, Sample-B, Sample-C
+;available=policy-name-2, Sample-A, Sample-B, Sample-C
+;round-robin=policy-name-3, Sample-A, Sample-B, Sample-C
+;ssid=policy-name-4, Sample-A, Sample-B, LINK_22E171:Sample-B, LINK_22E172:Sample-C
+
+#
+# Params "tag" and "enabled" are optional.
+# The default sync interval for all kinds of remote resources is 24*60*60 seconds.
+#
+[server_remote]
+https://www.n3ro.live/api/client/sip002?id=2940&password=dAEn6pNhH9fo, tag=N3ro, enabled=true
+https://gist.githubusercontent.com/NavePnow/36408a3c20033da966abaff110dabcec/raw/248d7f54373eec09cfb195333fe8ffa82c2d1d92/airport.txt, tag=Airport, enabled=true
+https://api.okab3.com/emoji?type=ss&url=https://suburl.mimemi.net/link/dbsBmloARm2lXgHf?mu=4, tag=MIMEMI, enabled=true
+https://teleplusfreessr.000webhostapp.com/, tag=Teleplus, enabled=true
+https://raw.githubusercontent.com/NavePnow/node/master/telegram.txt, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub, tag=ssrsub, enabled=true
+https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub, tag=ssrsub, enabled=true
+https://www.liesauer.net/yogurt/subscribe?ACCESS_TOKEN=DAYxR3mMaZAsaqUb, tag=https://www.liesauer.net/yogurt/subscribe, enabled=true
+https://qiaomenzhuanfx.netlify.com/, tag=https://qiaomenzhuanfx.netlify.com, enabled=true
+https://api.cn1.info/subscription/6b445127b840daf36dbfd24ef54d3e97.conf, enabled=true
+
+
+[filter_remote]
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list, tag=🚦去广告, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Hijacking.list, tag=🚫 运营商劫持, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/DomesticMedia.list, force-policy=📽 国内视频, tag=📽 国内视频, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Media/Netflix.list, tag=📺 Netflix, force-policy=📺 Netflix, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Media/YouTube.list, tag=🎬 YouTube, force-policy=🎬 YouTube, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/ForeignMedia.list, tag=💻 国外影视,force-policy= 💻 国外影视, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Global.list, tag=🌍 国外网站, force-policy= 🌏 国外网站, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Apple.list, tag= Apple服务, force-policy=🍎 苹果服务,enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/China.list, tag=🐼 国内网站, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Media/Spotify.list, tag=🎧 Spotify, force-policy=Spotify, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Media/Pornhub.list, tag=💿Pornhub, force-policy=Pornhub, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/PayPal.list, tag=💳Paypal, enabled=true
+
+[rewrite_remote]
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Rewrite.conf, tag=神机复写规则, enabled=true
+http://cloudcompute.lbyczf.com/quanx-rewrite, tag=lhie1复写, enabled=true
+
+[server_local]
+
+shadowsocks=45.12.207.37:11019, method=aes-256-cfb, password=7PAd47, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=36:oxqk9h9gfwc, obfs=http_simple, obfs-host=9d1d736.microsoft.com, fast-open=false, udp-relay=false, tag=SuShi-1 - 11019 端口单端口多用户
+
+shadowsocks=203.137.76.84:11019, method=aes-256-cfb, password=7PAd47, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=36:oxqk9h9gfwc, obfs=http_simple, obfs-host=9d1d736.microsoft.com, fast-open=false, udp-relay=false, tag=SuShi-2 - 11019 端口单端口多用户
+
+
+shadowsocks=ipv4.ji-H3H205-0000i05.ldiwam.ngcssddns.com:11019, method=aes-256-cfb, password=7PAd47, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=36:oxqk9h9gfwc, obfs=http_simple, obfs-host=9d1d736.microsoft.com, fast-open=false, udp-relay=false, tag=MilkTeaL - 11019 端口单端口多用户
+
+shadowsocks=hk.evanwang.me:443, method= aes-256-cfb, password=v2rayss, obfs=wss, obfs-host=hk.evanwang.me, obfs-uri=/ss, fast-open=true, udp-relay=true, tag=ss-ws-tls-hk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[filter_local]
+host-suffix, instabug.com, proxy
+host-suffix, www.mimemi.org, proxy
+host-suffix, n3ro.host, proxy
+host-suffix, teleplusfreessr.000webhostapp.com, proxy
+host, https://teleplusfreessr.000webhostapp.com, proxy
+;user-agent, ?abc*, proxy
+;host, www.google.com, proxy
+;host-keyword, adsite, reject
+;host-suffix, googleapis.com, proxy
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+geoip, cn, direct
+final, 🕹 黑/白名单
+
+
+[rewrite_local]
+
+# 去微信公众号广告 (By Choler)
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+
+[mitm]
+;skip_validating_cert = false
+;force_sni_domain_name = false
+hostname = *.example.com, *.sample.com, mp.weixin.qq.com,
+passphrase = 4B676386
+p12 = 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
