@@ -64,7 +64,7 @@ server=/*.xiaomi.com/119.29.29.29
 # ssid policy points to the server depending on the network environment.
 #
 [policy]
-available=MIMEMI, 🇯🇵【V0】日本 IIJ 0.5倍率, 🇬🇧【V0】英国 Clouvider 0.5倍率, 🇷🇺【V2】俄罗斯 2 Gcore, 🇷🇺【V2】俄罗斯 5 Gcore 0.8倍率, 🇯🇵【V2】日本 1 DIX 0.8倍率, 🇯🇵【V2】日本 10 GMO 0.5倍率, 🇯🇵【V2】日本 7 K-OP 0.5倍率, 🇺🇲【V2】美国 2 HE 0.5倍率, 🇵🇭【V2】菲律宾 PCCW 0.8倍率, 🇭🇰【V2】香港 1 HKT 0.8倍率, 🇭🇰【V2】香港 17 HKT 0.8倍率, 🇭🇰【V2】香港 27 HKBN 0.8倍率, 🇷🇺【V3】俄罗斯 1 KHV 0.8倍率, 🇹🇼【V3】台湾 3 Hinet 0.8倍率, 🇯🇵【V3】日本 2 IPS, 🇯🇵【V3】日本 3 GMO 0.5倍率, 🇯🇵【V3】日本 9 IDCF 1.5倍率, 🇺🇲【V3】美国 1 C3 0.8倍率, 🇺🇲【V3】美国 5 CN2 GIA 0.5倍率, 🇭🇰【V3】香港 10 HKT 0.8倍率, 🇭🇰【V3】香港 11 HKT 0.8倍率, 🇭🇰【V3】香港 13 HKT 0.8倍率, 🇭🇰【V3】香港 19 HKBN 0.8倍率, 🇭🇰【V3】香港 3 HKT 0.8倍率, 🇭🇰【V3】香港 30 HKBN 0.8倍率, 🇭🇰【V3】香港 33 HGC 0.8倍率, 🇭🇰【V3】香港 7 HKT 0.8倍率, 🇭🇰【V3】香港 8 HKT 0.8倍率, 🇹🇷土耳其特殊用途 視頻不推薦, 🇧🇷巴西 特殊用途 視頻不推薦, 迪拜 我也不知道這節點能幹啥
+available=MIMEMI, 🇯🇵【V0】日本 IIJ 0.5倍率, 🇬🇧【V0】英国 Clouvider 0.5倍率, 🇷🇺【V2】俄罗斯 2 Gcore, 🇷🇺【V2】俄罗斯 5 Gcore 0.8倍率, 🇯🇵【V2】日本 1 DIX 0.8倍率, 🇯🇵【V2】日本 10 GMO 0.5倍率, 🇯🇵【V2】日本 7 K-OP 0.5倍率, 🇺🇲【V2】美国 2 HE 0.5倍率, 🇵🇭【V2】菲律宾 PCCW 0.8倍率, 🇭🇰【V2】香港 1 HKT 0.8倍率, 🇭🇰【V2】香港 17 HKT 0.8倍率, 🇭🇰【V2】香港 27 HKBN 0.8倍率, 🇷🇺【V3】俄罗斯 1 KHV 0.8倍率, 🇹🇼【V3】台湾 3 Hinet 0.8倍率, 🇯🇵【V3】日本 2 IPS 0.8倍率, 🇯🇵【V3】日本 3 GMO 0.5倍率, 🇯🇵【V3】日本 9 IDCF 1.5倍率, 🇺🇲【V3】美国 1 C3 0.8倍率, 🇺🇲【V3】美国 5 CN2 GIA 0.5倍率, 🇭🇰【V3】香港 10 HKT 0.8倍率, 🇭🇰【V3】香港 11 HKT 0.8倍率, 🇭🇰【V3】香港 13 HKT 0.8倍率, 🇭🇰【V3】香港 19 HKBN 0.8倍率, 🇭🇰【V3】香港 3 HKT 0.8倍率, 🇭🇰【V3】香港 30 HKBN 0.8倍率, 🇭🇰【V3】香港 33 HGC 0.8倍率, 🇭🇰【V3】香港 7 HKT 0.8倍率, 🇭🇰【V3】香港 8 HKT 0.8倍率, 🇹🇷土耳其特殊用途 視頻不推薦, 🇧🇷巴西 特殊用途 視頻不推薦, 迪拜 我也不知道這節點能幹啥
 available=Airport, [端口复用] 俄罗斯A RT, [端口复用] 俄罗斯B RT, [端口复用] 俄罗斯C RT, [端口复用] 香港动态 HKT A, [端口复用] 香港动态 HKT B, [端口复用] 香港动态 HKT C, [端口复用] 香港动态 HKT D, [端口复用] 香港动态 HKT E, [端口复用] 香港动态 HKT F, [端口复用] 香港动态 HKT G, [端口复用] 香港动态 HKT H, [端口复用] 香港动态 HKT I, [端口复用] 香港动态 HKT J, [端口复用] 香港动态 HKT K, [端口复用] 香港动态 HKBN A, [端口复用] 香港动态 HKBN B, [端口复用] 香港动态 WTT, 香港TLS1.2食用, [端口复用] 香港 Azure A 10倍, [端口复用] 香港 Azure B 10倍, [端口复用] 香港 Azure C 10倍, [端口复用] 澳门宽频, [端口复用] 美国洛杉矶, [端口复用] 美国流媒体 A, [端口复用] 美国流媒体 B, [端口复用] 美国流媒体 C, [端口复用] 美国流媒体 D, [端口复用] 美国流媒体 E, [端口复用] 美国GIA CN2流媒体 A, [端口复用] 美国GIA CN2流媒体 B, [端口复用] 美国GIA CN2流媒体 C, [端口复用] 美国GIA CN2流媒体 D, [端口复用] 美国GIA CN2流媒体 E, [端口复用] 美国GIA CN2流媒体 F, [端口复用] 日本pccw A, [端口复用] 日本pccw B, [端口复用] 日本 微软A 2.5倍, [端口复用] 日本 微软B 2.5倍, [端口复用] 日本 亚马逊, [端口复用] 韩国 亚马逊, [端口复用] 新加坡 亚马逊, [端口复用] 印度 亚马逊, [端口复用] 新加坡A 微软 2.5倍, [端口复用] 新加坡B 微软 2.5倍, 加拿大, [端口复用] 韩国高速接入A, [端口复用] 台湾高速节点A, [端口复用] 台湾高速节点B, [端口复用] 台湾高速节点C, [端口复用] 台湾高速节点D, [端口复用] 台湾高速节点E, [端口复用] 台湾高速节点F, [端口复用] 台湾高速节点G, [端口复用] 台湾高速节点H, [端口复用] 澳洲, [端口复用] 英国 iplayer A, [端口复用] 英国 iplayer B, [端口复用] 土耳其 特殊, [端口复用] IPV6日本线路 A, [端口复用] IPV6日本线路 B, [端口复用] IPV6美国线路
 static=🇺🇸 US, [端口复用] 美国洛杉矶, [端口复用] 美国流媒体 A, [端口复用] 美国流媒体 B, [端口复用] 美国流媒体 C, [端口复用] 美国流媒体 D, [端口复用] 美国流媒体 E, [端口复用] 美国GIA CN2流媒体 A, [端口复用] 美国GIA CN2流媒体 B, [端口复用] 美国GIA CN2流媒体 C, [端口复用] 美国GIA CN2流媒体 D, [端口复用] 美国GIA CN2流媒体 E, [端口复用] 美国GIA CN2流媒体 F, [端口复用] IPV6美国线路, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/United_States.png
 
@@ -86,7 +86,7 @@ static=💻 国外影视, proxy, direct, img-url= https://raw.githubusercontent.
 static=📽 国内视频, direct, proxy, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/DomesticMedia.png
 static=🎬 YouTube, proxy, direct, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/YouTube.png
 static=📺 Netflix, proxy, direct, ss-ws-tls-hk, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Netflix_Letter.png
-static=🌏 国外网站, proxy,direct, img-url= https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Global.png
+static=🌏 国外网站, proxy, direct, MIMEMI, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Global.png
 static=🕹 黑/白名单, direct, proxy, img-url=https://raw.githubusercontent.com/zealson/Zure/master/IconSet/Final.png
 
 
@@ -155,6 +155,7 @@ shadowsocks=hk.evanwang.me:443, method= aes-256-cfb, password=v2rayss, obfs=wss,
 
 
 [filter_local]
+host-suffix, twcservice.mybluemix.net, proxy
 host-suffix, hkmap.live, proxy
 host-suffix, instabug.com, proxy
 host-suffix, www.mimemi.org, proxy
