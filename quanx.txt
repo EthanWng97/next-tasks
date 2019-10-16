@@ -132,6 +132,7 @@ https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter
 https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/PayPal.list, tag=💳Paypal, enabled=true
 
 [rewrite_remote]
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf, tag=js脚本, enabled=true
 https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Rewrite.conf, tag=神机复写规则, enabled=true
 http://cloudcompute.lbyczf.com/quanx-rewrite, tag=lhie1复写, enabled=true
 
