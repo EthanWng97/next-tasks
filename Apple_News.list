@@ -2,6 +2,7 @@
 DOMAIN,gspe1-ssl.ls.apple.com,PROXY
 DOMAIN,gspe1-ssl.ls.apple.com,PROXY
 USER-AGENT,AppleNews*,PROXY
+DOMAIN,gateway.icloud.com,PROXY
 DOMAIN-SUFFIX,apple.news,PROXY
 DOMAIN,news-client.apple.com,PROXY
 DOMAIN,news-edge.apple.com,PROXY
