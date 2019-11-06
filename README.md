@@ -22,7 +22,7 @@
 ### checkin.js
 **By [Neurogram](https://github.com/Neurogram-R) feat [NavePnow](https://github.com/NavePnow)**
 
-<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/checkin.jpg" height="70%" width="70%">
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/checkin1.jpg" height="50%" width="50%">
 
 1. Features
    1. Show Used data, Rest data and Due date
