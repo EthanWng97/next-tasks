@@ -30,3 +30,7 @@
 2. Instructions
    1. `https://www.notion.so/Check-in-0797ec9f9f3f445aae241d7762cf9d8b`
    2. Check the data format and modify the regex if something goes wrong
+
+### checkin_1point.js
+**By [NavePnow](https://github.com/NavePnow) feat [wangfei021325](https://t.me/wangfei021325)**
+[Tutorial](https://nave.work/2019/11/07/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/#check-in-for-surge)
