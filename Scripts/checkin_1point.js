@@ -59,7 +59,15 @@ function getloginhash(username, password, questionid, answer)
                         formhash_login = formhash_login[0].replace("formhash\" value=\"", "")
                         await login(username, password, questionid, answer, formhash_login)
                     }else{
-                        $notification.post("操作失败_获取登陆hash");
+                        var formhash_login1 = data.match(/formhash" value='(\w+)/)
+                        if(formhash_login1)
+                        {   
+                            formhash_login1 = formhash_login1[0].replace("formhash\" value='", "")
+                            await login(username, password, questionid, answer, formhash_login1)
+                        }
+                        else{
+                            $notification.post("操作失败_获取登陆hash");
+                        }
                     }
                 }
             
