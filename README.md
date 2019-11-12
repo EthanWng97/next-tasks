@@ -1,5 +1,5 @@
 # Profiles
-📖 [文档](https://github.com/NavePnow/Profiles/blob/master/README.md) | 📖 [Docs](https://github.com/NavePnow/Profiles/blob/master/README_EN.md)
+📖 文档 | 📖 [Docs](https://github.com/NavePnow/Profiles/blob/master/README_EN.md)
 
 ## Filter - Surge and QuantumultX 规则集
 
