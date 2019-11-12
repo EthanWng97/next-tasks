@@ -1,4 +1,5 @@
 # Profiles
+📖 [文档](https://github.com/NavePnow/Profiles/blob/master/README.md) | 📖 Docs
 
 ## Filter - Ruleset of Surge and QuantumultX
 
