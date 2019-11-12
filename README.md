@@ -7,7 +7,7 @@
 ### filter_conversion.js
 **powered by CLOUDFLARE Workers**
 
-<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/process.jpeg" height="70%" width="70%">
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/process.jpeg" height="60%" width="60%">
 
 1. Features
     1. Generate Surge Ruleset from QuantumultX filter link and vice versa.
@@ -22,7 +22,7 @@
 ### checkin.js
 **By [Neurogram](https://github.com/Neurogram-R) feat [NavePnow](https://github.com/NavePnow)**
 
-<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMAGE 2019-11-12 19:57:53.jpg" height="50%" width="50%">
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMAGE 2019-11-12 19:57:53.jpg" height="40%" width="40%">
 
 1. Features
    1. Show Used data, Rest data and Due date
@@ -43,7 +43,7 @@ Auto check-in for 1point3acres.com
 **By [NavePnow](https://github.com/NavePnow)**
 Modified according to the Jsbox script from author [coo11](https://t.me/coo11) 
 
-<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMG_0666.PNG" height="50%" width="50%">
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMG_0666.PNG" height="40%" width="40%">
 
 1. Features
    1. Show Rest time, Rest fee and Rest flow
