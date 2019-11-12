@@ -63,6 +63,6 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
 # Tip Jar
 If you're really, really enjoying the content, you can leave extra tips to support the developer. Thanks for even considering.
 
-| PayPal                                                                                                                                                                       | 微信赞赏 WeChat Pay                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DSZJCN4ZUEW74&currency_code=USD&source=url) | <img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/1234.JPG" width="200"> 
+| PayPal                                                                                                                                                                       | 微信赞赏 WeChat Pay                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DSZJCN4ZUEW74&currency_code=USD&source=url) | <img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/1234.JPG" width="200">
