@@ -1,6 +1,6 @@
 const api = "";
 const lang = "zh"
-var lat_lon = "37.8267,-122.4233"
+var lat_lon = "auto_ip"
 
 //第一行引号内填入申请到的dark sky api
 //有问题请通过Telegram反馈 https://t.me/Leped_Bot
