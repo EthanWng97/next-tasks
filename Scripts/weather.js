@@ -39,7 +39,7 @@ function weather() {
             if (icon_text == "clear-night") icon = "🌑";
             var dailiy_maxtemp = obj.daily.data[0].temperatureMax;//17.53
             var dailiy_mintemp = obj.daily.data[0].temperatureMin;//12.76
-            $notification.post("Dark Sky", icon + " 温度: " + dailiy_mintemp + " - " + dailiy_maxtemp, hour_summary);
+            $notification.post("Dark Sky", icon + " 温度 " + dailiy_mintemp + " - " + dailiy_maxtemp, hour_summary);
         }
     });
 }
