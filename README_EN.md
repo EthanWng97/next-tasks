@@ -14,8 +14,8 @@
     1. Generate Surge Ruleset from QuantumultX filter link and vice versa.
     2. Change Ruleset automatically if source file changed.
 2. Instructions
-    1. create new worker in Cloudflare 
-    2. copy all contents in Editor
+    1. Create new worker in Cloudflare 
+    2. Copy all contents in Editor
     3. Fill in required content (url and replace regex)
     4. Save and Deploy
     5. Enjoy ur life
@@ -27,7 +27,7 @@
 
 1. Features
    1. Show Used data, Rest data and Due date
-   2. Using Cron to run scripts periodically
+   2. Use Cron to run scripts periodically
 2. Instructions
    1. `https://www.notion.so/Check-in-0797ec9f9f3f445aae241d7762cf9d8b`
    2. Check the data format and modify the regex if something goes wrong
@@ -48,17 +48,39 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
 
 1. Features
    1. Show Rest time, Rest fee and Rest flow
-   2. Using Cron to run scripts periodically
+   2. Use Cron to run scripts periodically
 2. Instructions
-   1. set your China Unicom number in Mini Program of Alipay (provided api)
-   2. create 10010+.js under Surge folder and copy all the content of [link](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js)
-   3. add your phone number into required place
+   1. Set your China Unicom number in Mini Program of Alipay (provided api)
+   2. Create 10010+.js under Surge folder and copy all the content of [link](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js)
+   3. Add your phone number into required place
    4. Open Surge in Edit mode and write `cron "00 12 * * *" debug=1,script-path=10010+.js` below the config
    5. Save it and enjoy your life
     
-3. Something you know know
+3. ⚠️ Something you know know
     1. If you want to put the file online, make sure keep it private because the response data of Alipay provide your REAL NAME.
     2. Feel free to [contact me](https://t.me/Leped_Bot) if you have any problem.
+
+### weather.js
+**By [NavePnow](https://github.com/NavePnow)**
+**powered by Dark Sky**
+
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/weather.jpg" height="40%" width="40%">
+
+1. Features
+   1. Show weather icon, range of temperature and summary
+   2. Use Cron to run scripts periodically (Recommend to run script at 8 am every day.)
+2. Instructions
+   1. Register at [Dark Sky website](https://darksky.net/dev) and get free api
+   2. Download and run [Shortcuts](https://www.icloud.com/shortcuts/bd08ebf5f8ef4d0c8177e0fb6645f426)
+   3. Add the Secret Key generated from step one to the shortcuts
+   4. Open Surge in Edit mode and write `cron "00 8 * * *" debug=1,script-path=weather.js` 
+   5. Save it and enjoy your life
+    
+3. ⚠️ Something you know know
+    1. If you want to put the file online, make sure keep it private because the API Usage of Dark Sky api if not countless.
+    2. Refer to [Dark Sky API](https://darksky.net/dev/docs#overview) if you want to customize your own weather notification.
+    3. The purpose of this script is to make a daily weather reminder every morning. The script will be modified accordingly to meet my needs because Dark Sky Api has US extreme weather warning
+    4. Feel free to [contact me](https://t.me/Leped_Bot) if you have any problem.
 
 
 # Tip Jar
