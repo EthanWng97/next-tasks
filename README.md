@@ -79,7 +79,7 @@
 3. 注意⚠️
     1. 如果你想把文件放在云端，确保该文件是私密的，因为Dark Sky api 免费的调用次数不是无限的，具体请参考 API Usage
     2. 如果想自定义功能，请参考 [Dark Sky API](https://darksky.net/dev/docs#overview)
-    3. 该脚本的目的是每天早上进行今天一天的天气提醒，因为 Dark Sky Api 有 US 极端天气警告，所以后续脚本会做相应的修改已适应本人的需求
+    3. 该脚本的目的是每天早上进行今天一天的天气提醒，因为 Dark Sky Api 有 US 极端天气警告，所以后续脚本会做相应的修改以适应本人的需求
     4. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
 # Tip Jar
