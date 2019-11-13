@@ -1,22 +1,23 @@
 # Profiles
-📖 文档 | 📖 [Docs](https://github.com/NavePnow/Profiles/blob/master/README_EN.md)
+📖 [文档](https://ttrss.henry.wang/zh/) | 📖 [Docs](https://ttrss.henry.wang)
 
 ## Filter - Surge and QuantumultX 规则集
 
 ## Scripts
 
 ### filter_conversion.js
+**By [NavePnow](https://github.com/NavePnow)**
 **powered by CLOUDFLARE Workers**
 
 <img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/process.jpeg" height="60%" width="60%">
 
 1. 特点
     1. 从 QuantumultX 分流链接生成 Surge 规则集，反之亦然。
-    2. 如果源规则集改变，生成的分流链接内容自动改变。
+    2. 如果源链接改变，生成的分流链接自动改变。
 2. Instructions
     1. 在 CloudFlare 网站中创建新的 Workers
-    2. 复制粘贴所有脚本内容到编辑器中
-    3. 填充并修改必要的内容 (url 和 正则表达式)
+    2. 粘贴所有脚本内容到编辑器中
+    3. 填充并修改必要的内容 (url 和 正则)
     4. 保存和部署
    
 ### checkin.js
@@ -57,8 +58,29 @@
     
 3. 注意⚠️
     1. 如果你想把文件放在云端，确保该文件是私密的，因为支付宝api返回的数据包含了你的真实姓名。
-    2. 如有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
+    2. 如果有问题，欢迎 [联系](https://t.me/Leped_Bot) 
 
+### weather.js
+**By [NavePnow](https://github.com/NavePnow)**
+**powered by Dark Sky**
+
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/weather.jpg" height="40%" width="40%">
+
+1. 特点
+   1. 显示天气图标，当天温度以及天气信息总结
+   2. 利用 Cron 定时运行脚本(建议每天早上8点运行)
+2. 步骤
+   1. 在 [Dark Sky 网站](https://darksky.net/dev)注册账号，获得免费的 api
+   2. 下载并运行 [捷径](https://www.icloud.com/shortcuts/bd08ebf5f8ef4d0c8177e0fb6645f426)
+   3. 在捷径中添加第一步生成的 Secret Key
+   4. 在编辑模式下打开 Surge, 并在配置文件最后(Scripts内容下)添加`cron "00 8 * * *" debug=1,script-path=weather.js` 
+   5. 保存
+    
+3. 注意⚠️
+    1. 如果你想把文件放在云端，确保该文件是私密的，因为Dark Sky api 免费的调用次数不是无限的，具体请参考 API Usage
+    2. 如果想自定义功能，请参考 [Dark Sky API](https://darksky.net/dev/docs#overview)
+    3. 该脚本的目的是每天早上进行今天一天的天气提醒，因为 Dark Sky Api 有 US 极端天气警告，所以后续脚本会做相应的修改已适应本人的需求
+    4. 如果有问题，欢迎 [联系](https://t.me/Leped_Bot) 
 
 # Tip Jar
 
