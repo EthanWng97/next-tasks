@@ -1,4 +1,4 @@
-const api = "";
+var api = "auto_api";
 const lang = "zh"
 var lat_lon = "auto_ip"
 
