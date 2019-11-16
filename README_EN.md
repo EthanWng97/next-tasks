@@ -38,7 +38,7 @@
 <img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMAGE 2019-11-12 19:58:49.jpg" height="40%" width="40%">
 Auto check-in for 1point3acres.com
 
-[Tutorial](https://nave.work/2019/11/07/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/#check-in-for-surge)
+[Tutorial](https://nave.work/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC.html)
 
 ### 10010+.js
 **By [NavePnow](https://github.com/NavePnow)**
