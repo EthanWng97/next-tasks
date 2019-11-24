@@ -24,6 +24,7 @@ function weather() {
             $notification.post("Dark Sky", lat_lon + '信息获取失败', error);
         } else {
             var obj = JSON.parse(data);
+            console.log(obj);
             var hour_summary = obj.hourly.summary;
             var icon_text = obj.hourly.icon;
             var icon = "❓"
@@ -37,10 +38,10 @@ function weather() {
             if (icon_text == "fog") icon = "🌫";
             if (icon_text == "partly-cloudy-night") icon = "🌑";
             if (icon_text == "clear-night") icon = "🌑";
-            var dailiy_maxtemp = obj.daily.data[0].temperatureMax;//17.53
-            var dailiy_mintemp = obj.daily.data[0].temperatureMin;//12.76
-            $notification.post("Dark Sky", icon + " 温度 " + dailiy_mintemp + " - " + dailiy_maxtemp, hour_summary);
+            var daily_prec_chance = obj.daily.data[0].precipProbability;
+            var daily_maxtemp = obj.daily.data[0].temperatureMax;
+            var daily_mintemp = obj.daily.data[0].temperatureMin;
+            $notification.post("Dark Sky", icon + " " + daily_mintemp + " - " + daily_maxtemp + "  ☔️% " + Number(daily_prec_chance)*100, hour_summary);
         }
     });
 }
-
