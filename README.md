@@ -64,10 +64,10 @@
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Dark Sky**
 
-<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/weather.jpg" height="40%" width="40%">
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMG_0886.jpg" height="40%" width="40%">
 
 1. 特点
-   1. 显示天气图标，当天温度以及天气信息总结
+   1. 显示天气图标，当天温度，降雨概率以及实时天气信息总结
    2. 利用 Cron 定时运行脚本(建议每天早上8点运行)
 2. 步骤
    1. 在 [Dark Sky 网站](https://darksky.net/dev)注册账号，获得免费的 api
