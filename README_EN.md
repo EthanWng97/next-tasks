@@ -64,10 +64,10 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Dark Sky**
 
-<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/weather.jpg" height="40%" width="40%">
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMG_0886.jpg" height="40%" width="40%">
 
 1. Features
-   1. Show weather icon, range of temperature and summary
+   1. Show weather icon, range of temperature, precipProbability and hourly summary
    2. Use Cron to run scripts periodically (Recommend to run script at 8 am every day.)
 2. Instructions
    1. Register at [Dark Sky website](https://darksky.net/dev) and get free api
