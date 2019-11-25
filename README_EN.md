@@ -68,10 +68,10 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
 
 1. Features
    1. Show weather icon, range of temperature, precipProbability and hourly summary
-   2. Use Cron to run scripts periodically (Recommend to run script at 8 am every day.)
+   2. Use Cron to run scripts periodically (8am-8pm Run every 3 hours)
 2. Instructions
    1. Register at [Dark Sky website](https://darksky.net/dev) and get free api
-   2. Download and run [Shortcuts](https://www.icloud.com/shortcuts/6b98bb81a1324375820b212e53865261)
+   2. Download and run [Shortcuts](https://www.icloud.com/shortcuts/0e347c1a986b4462873a474ec8773820)
    3. Add the Secret Key generated from step one to the shortcuts
    4. Open Surge in Edit mode and write `cron "00 8 * * *" debug=1,script-path=weather.js` 
    5. Save it and enjoy your life
