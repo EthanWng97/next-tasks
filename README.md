@@ -68,12 +68,12 @@
 
 1. 特点
    1. 显示天气图标，当天温度，降雨概率以及实时天气信息总结
-   2. 利用 Cron 定时运行脚本(建议每天早上8点运行)
+   2. 利用 Cron 定时运行脚本(8am-8pm 每隔3小时运行一次)
 2. 步骤
    1. 在 [Dark Sky 网站](https://darksky.net/dev)注册账号，获得免费的 api
-   2. 下载并运行 [捷径](https://www.icloud.com/shortcuts/6b98bb81a1324375820b212e53865261)
+   2. 下载并运行 [捷径](https://www.icloud.com/shortcuts/0e347c1a986b4462873a474ec8773820)
    3. 在捷径中添加第一步生成的 Secret Key
-   4. 在编辑模式下打开 Surge, 并在配置文件最后(Scripts内容下)添加`cron "00 8 * * *" debug=1,script-path=weather.js` 
+   4. 在编辑模式下打开 Surge, 并在配置文件最后(Scripts内容下)添加`cron "0 0 8-20/3 * * *" debug=1,script-path=weather.js` 
    5. 保存
     
 3. 注意⚠️
