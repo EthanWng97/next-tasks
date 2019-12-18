@@ -71,9 +71,10 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
    2. Use Cron to run scripts periodically (8am-8pm Run every 3 hours)
 2. Instructions
    1. Register at [Dark Sky website](https://darksky.net/dev) and get free api
-   2. Download and run [Shortcuts](https://www.icloud.com/shortcuts/0e347c1a986b4462873a474ec8773820)
+   2. Download and run [Shortcuts](https://www.icloud.com/shortcuts/11d347ed592f4b67847403a9052666f4)
    3. Add the Secret Key generated from step one to the shortcuts
-   4. Open Surge in Edit mode and write `cron "00 8 * * *" debug=1,script-path=weather.js` 
+   4. Open Surge in Edit mode and write `cron "00 8 * * *" debug=1,script-path=weather_dark.js` 
+          QuantumultX: 0 8-20/3 * * * weather_dark.js
    5. Save it and enjoy your life
     
 3. ⚠️ Something you know know
