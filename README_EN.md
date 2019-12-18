@@ -40,7 +40,7 @@ Auto check-in for 1point3acres.com
 
 [Tutorial](https://nave.work/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC.html)
 
-### 10010+.js
+### 10010+.js/10010+_qx.js
 **By [NavePnow](https://github.com/NavePnow)**
 Modified according to the Jsbox script from author [coo11](https://t.me/coo11) 
 
@@ -51,9 +51,10 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
    2. Use Cron to run scripts periodically
 2. Instructions
    1. Set your China Unicom number in Mini Program of Alipay (provided api)
-   2. Create 10010+.js under Surge folder and copy all the content of [link](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js)
+   2. Create 10010+.js under Surge/QuantumultX folder and copy all the content of [link](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js)
    3. Add your phone number into required place
    4. Open Surge in Edit mode and write `cron "00 12 * * *" debug=1,script-path=10010+.js` below the config
+      QuantumultX: `00 12 * * * 10010+_qx.js`
    5. Save it and enjoy your life
     
 3. ⚠️ Something you know know
