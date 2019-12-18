@@ -1,7 +1,7 @@
 var lang = "zh"
 var lat_lon = "auto_ip"
 var api = "auto_api"
-//第二行引号内填入申请到的dark sky api
+//第三行引号内填入申请到的dark sky api
 //有问题请通过Telegram反馈 https://t.me/Leped_Bot
 //clear-day, partly-cloudy-day, cloudy, clear-night, rain, snow, sleet, wind, fog, or partly-cloudy-night
 //☀️🌤⛅️🌥☁️🌦🌧⛈🌩🌨❄️💧💦🌫☔️☂️ ☃️⛄️
