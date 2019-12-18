@@ -74,7 +74,7 @@
    2. 下载并运行 [捷径](https://www.icloud.com/shortcuts/11d347ed592f4b67847403a9052666f4)
    3. 在捷径中添加第一步生成的 Secret Key
    4. 在编辑模式下打开 Surge, 并在配置文件最后(Scripts内容下)添加`cron "0 0 8-20/3 * * *" debug=1,script-path=weather_dark.js` 
-       QuantumultX: 0 8-20/3 * * * weather_dark.js
+       QuantumultX: `0 8-20/3 * * * weather_dark.js`
    5. 保存
     
 3. 注意⚠️
