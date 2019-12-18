@@ -40,7 +40,7 @@
 
 [教程](https://nave.work/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC.html)
 
-### 10010+.js
+### 10010+.js/10010+_qx.js
 **By [NavePnow](https://github.com/NavePnow)**
 根据作者[coo11](https://t.me/coo11) 的 Jsbox 脚本进行修改
 
@@ -51,9 +51,10 @@
    2. 利用 Cron 定时运行脚本
 2. 步骤
    1. 在支付宝小程序“中国联通”设置你的联通手机号 (提供 api)
-   2. 在 Surge 目录下创建 10010+.js 并复制 [链接](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js) 所有内容到脚本中
+   2. 在 Surge 目录下创建 10010+.js 并复制 [链接](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js) 所有内容到脚本中 QuantumultX 同理
    3. 在指定地方添加联通手机号
    4. 在编辑模式下打开 Surge, 并在配置文件最后(Scripts内容下)添加`cron "00 12 * * *" debug=1,script-path=10010+.js` 
+      QuantumultX: `00 12 * * * 10010+_qx.js`
    5. 保存
     
 3. 注意⚠️
