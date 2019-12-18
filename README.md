@@ -60,7 +60,7 @@
     1. 如果你想把文件放在云端，确保该文件是私密的，因为支付宝api返回的数据包含了你的真实姓名。
     2. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
-### weather.js
+### weather.js/weather_qx.js
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Dark Sky**
 
