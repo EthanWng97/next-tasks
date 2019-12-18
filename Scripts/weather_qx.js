@@ -35,5 +35,5 @@ $task.fetch(wurl).then(response => {
 
 
 }, reason => {
-    $notify("错误", "", reason.error);
+    $notify("Dark Sky", lat_lon + '信息获取失败', reason.error);
 });
