@@ -60,7 +60,7 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
     1. If you want to put the file online, make sure keep it private because the response data of Alipay provide your REAL NAME.
     2. Feel free to [contact me](https://t.me/Leped_Bot) if you have any problem.
 
-### weather.js
+### weather.js/weather_qx.js
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Dark Sky**
 
