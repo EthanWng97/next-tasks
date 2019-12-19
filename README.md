@@ -51,10 +51,10 @@
    2. 利用 Cron 定时运行脚本
 2. 步骤
    1. 在支付宝小程序“中国联通”设置你的联通手机号 (提供 api)
-   2. 在 Surge 目录下创建 10010+.js 并复制 [链接](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js) 所有内容到脚本中 QuantumultX 同理
+   2. 在 Surge 目录下创建 10010+.js 并复制 [链接](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js) 所有内容到脚本中 [QuantumultX](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B_qx.js) 同理
    3. 在指定地方添加联通手机号
    4. 在编辑模式下打开 Surge, 并在配置文件最后(Scripts内容下)添加`cron "00 12 * * *" debug=1,script-path=10010+.js` 
-      QuantumultX: `00 12 * * * 10010+_qx.js`
+      QuantumultX([[task_local] 标签下): `00 12 * * * 10010+_qx.js`
    5. 保存
     
 3. 注意⚠️
