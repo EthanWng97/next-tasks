@@ -51,10 +51,10 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
    2. Use Cron to run scripts periodically
 2. Instructions
    1. Set your China Unicom number in Mini Program of Alipay (provided api)
-   2. Create 10010+.js under Surge/QuantumultX folder and copy all the content of [link](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js)
+   2. Create 10010+.js under Surge/[QuantumultX](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B_qx.js) folder and copy all the content of [link](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js)
    3. Add your phone number into required place
    4. Open Surge in Edit mode and write `cron "00 12 * * *" debug=1,script-path=10010+.js` below the config
-      QuantumultX: `00 12 * * * 10010+_qx.js`
+      QuantumultX(below the [[task_local]): `00 12 * * * 10010+_qx.js`
    5. Save it and enjoy your life
     
 3. ⚠️ Something you know know
@@ -75,7 +75,7 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
    2. Download and run [Shortcuts](https://www.icloud.com/shortcuts/11d347ed592f4b67847403a9052666f4)
    3. Add the Secret Key generated from step one to the shortcuts
    4. Open Surge in Edit mode and write `cron "00 8 * * *" debug=1,script-path=weather_dark.js` 
-          QuantumultX: `0 8-20/3 * * * weather_dark.js`
+          QuantumultX(below the [[task_local]): `0 8-20/3 * * * weather_dark.js`
    5. Save it and enjoy your life
     
 3. ⚠️ Something you know know
