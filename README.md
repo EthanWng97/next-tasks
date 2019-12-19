@@ -54,7 +54,7 @@
    2. 在 Surge/QuantumultX Scripts目录下创建 10010+.js 并复制 [链接](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js) 所有内容到脚本中 [QuantumultX](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/10010%2B.js) 同理
    3. 在指定地方添加联通手机号
    4. 在编辑模式下打开 Surge, 并在配置文件最后(Scripts内容下)添加`cron "00 12 * * *" debug=1,script-path=10010+.js` 
-      QuantumultX([[task_local] 标签下): `00 12 * * * 10010+_qx.js`
+      QuantumultX([[task_local] 标签下): `00 12 * * * 10010+.js`
    5. 保存
     
 3. 注意⚠️
