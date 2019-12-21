@@ -84,6 +84,14 @@ Modified according to the Jsbox script from author [coo11](https://t.me/coo11)
     3. The purpose of this script is to make a daily weather reminder every morning. The script will be modified accordingly to meet my needs because Dark Sky Api has US extreme weather warning
     4. Feel free to [contact me](https://t.me/Leped_Bot) if you have any problem.
 
+### weibo
+**By [NavePnow](https://github.com/NavePnow)**
+**inspired by [Nobyda](https://t.me/nubida)**
+
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMG_1189.JPG" height="40%" width="40%">
+Auto check-in for Weibo Super_Talk
+
+[Tutorial](https://nave.work/微博超话自动签到脚本.html)
 
 # Tip Jar
 If you're really, really enjoying the content, you can leave extra tips to support the developer. Thanks for even considering.

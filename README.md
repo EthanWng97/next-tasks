@@ -84,6 +84,15 @@
     3. 该脚本的目的是每天早上进行今天一天的天气提醒，因为 Dark Sky Api 有 US 极端天气警告，所以后续脚本会做相应的修改以适应本人的需求
     4. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
+### weibo
+**By [NavePnow](https://github.com/NavePnow)**
+**inspired by [Nobyda](https://t.me/nubida)**
+
+<img src="https://raw.githubusercontent.com/NavePnow/blog_photo/master/IMG_1189.JPG" height="40%" width="40%">
+微博超话自动签到脚本
+
+[教程](https://nave.work/微博超话自动签到脚本.html)
+
 # Tip Jar
 
 | PayPal                                                                                                                                                                       | 微信赞赏 WeChat Pay                                                                                                    |
