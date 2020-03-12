@@ -162,7 +162,7 @@
 **By [NavePnow](https://github.com/NavePnow)**
 **UI inspired by [lchreal6](https://github.com/lchreal6)**
 
-<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_2419.PNG" height="40%" width="40%">
+<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/singtel+.jpg" height="40%" width="40%">
 
 1. 特点
    1. 显示剩余话费，流量，短信和电话相关信息
