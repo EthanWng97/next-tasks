@@ -3,6 +3,27 @@
 
 📖 文档 | 📖 [Docs](https://github.com/NavePnow/Profiles/blob/master/README_EN.md)
 
+Table of Contents
+=================
+
+   * [Profiles](#profiles)
+      * [Filter - Surge and QuantumultX 规则集](#filter---surge-and-quantumultx-规则集)
+      * [Scripts](#scripts)
+         * [Surge/QuantumultX](#surgequantumultx)
+            * [filter_conversion.js](#filter_conversionjs)
+            * [checkin.js](#checkinjs)
+            * [checkin_1point.js](#checkin_1pointjs)
+            * [10010 .js/10010 _qx.js](#10010js10010_qxjs)
+            * [weather.js/weather_qx.js](#weatherjsweather_qxjs)
+            * [weibo](#weibo)
+         * [Google Apps Script](#google-apps-script)
+            * [google_script/singtel.js](#google_scriptsingteljs)
+            * [google_script/calendar.js](#google_scriptcalendarjs)
+         * [JSBox](#jsbox)
+            * [JSBox/NUS_NextBus.js](#jsboxnus_nextbusjs)
+            * [JSBox/Singtel .js](#jsboxsingteljs)
+      * [Tip Jar](#tip-jar)
+
 ## Filter - Surge and QuantumultX 规则集
 
 ## Scripts
@@ -179,7 +200,7 @@
 
 
 
-# Tip Jar
+## Tip Jar
 
 | PayPal                                                                                                                                                                       | 微信赞赏 WeChat Pay                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
