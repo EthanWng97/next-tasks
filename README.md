@@ -147,7 +147,7 @@
 #### JSBox/NUS_NextBus.js
 **By [NavePnow](https://github.com/NavePnow)**
 
-<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_2407.PNG" height="40%" width="40%">
+<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_2407.PNG" height="30%" width="30%">
 
 1. 特点
    1. 检测用户所在位置信息进行公交站点筛选
