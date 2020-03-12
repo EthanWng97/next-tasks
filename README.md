@@ -125,7 +125,7 @@
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Google Script and Google Developers Console**
 
-<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_1925.jpg" height="40%" width="40%">
+<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_1925.jpg" height="35%" width="35%">
 
 1. 特点
    1. 根据 `Google Calendar Api` 可同时设置多个日历进行每日提醒
@@ -147,7 +147,7 @@
 #### JSBox/NUS_NextBus.js
 **By [NavePnow](https://github.com/NavePnow)**
 
-<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/nus_nextbus.jpg" height="40%" width="40%">
+<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/nus_nextbus.jpg" height="30%" width="30%">
 
 1. 特点
    1. 检测用户所在位置信息进行公交站点筛选
@@ -162,7 +162,7 @@
 **By [NavePnow](https://github.com/NavePnow)**
 **UI inspired by [lchreal6](https://github.com/lchreal6)**
 
-<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/singtel+.jpg" height="40%" width="40%">
+<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/singtel+.jpg" height="30%" width="30%">
 
 1. 特点
    1. 显示剩余话费，流量，短信和电话相关信息
