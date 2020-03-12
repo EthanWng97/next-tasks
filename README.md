@@ -7,7 +7,9 @@
 
 ## Scripts
 
-### filter_conversion.js
+### Surge/QuantumultX
+
+#### filter_conversion.js
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by CLOUDFLARE Workers**
 
@@ -22,7 +24,7 @@
     3. 填充并修改必要的内容 (url 和 正则)
     4. 保存和部署
    
-### checkin.js
+#### checkin.js
 **By [Neurogram](https://github.com/Neurogram-R) feat [NavePnow](https://github.com/NavePnow)**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMAGE 2019-11-12 19:57:53.jpg" height="40%" width="40%">
@@ -34,7 +36,7 @@
    1. `https://www.notion.so/Check-in-0797ec9f9f3f445aae241d7762cf9d8b`
    2. 如果内容出错，检查返回数据的内容以及格式并修改正则表达式
 
-### checkin_1point.js
+#### checkin_1point.js
 **By [NavePnow](https://github.com/NavePnow) feat [wangfei021325](https://t.me/wangfei021325)**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMAGE 2019-11-12 19:58:49.jpg" height="40%" width="40%">
@@ -42,7 +44,7 @@
 
 [教程](https://nave.work/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC.html)
 
-### 10010+.js/10010+_qx.js
+#### 10010+.js/10010+_qx.js
 **By [NavePnow](https://github.com/NavePnow)**
 根据作者[coo11](https://t.me/coo11) 的 Jsbox 脚本进行修改
 
@@ -63,7 +65,7 @@
     1. 如果你想把文件放在云端，确保该文件是私密的，因为支付宝api返回的数据包含了你的真实姓名。
     2. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
-### weather.js/weather_qx.js
+#### weather.js/weather_qx.js
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Dark Sky**
 
@@ -86,7 +88,7 @@
     3. 该脚本的目的是每天早上进行今天一天的天气提醒，因为 Dark Sky Api 有 US 极端天气警告，所以后续脚本会做相应的修改以适应本人的需求
     4. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
-### weibo
+#### weibo
 **By [NavePnow](https://github.com/NavePnow)**
 **inspired by [Nobyda](https://t.me/nubida)**
 
@@ -95,7 +97,9 @@
 
 [教程](https://nave.work/微博超话自动签到脚本.html)
 
-### google_script/singtel.js
+### Google Apps Script
+
+#### google_script/singtel.js
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Google Script**
 
@@ -117,7 +121,7 @@
 3.  注意⚠️
     1. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
-### google_script/calendar.js
+#### google_script/calendar.js
 **By [NavePnow](https://github.com/NavePnow)**
 **powered by Google Script and Google Developers Console**
 
@@ -137,6 +141,46 @@
    8. 设置一个合适的时间去触发脚本
 3.  注意⚠️
     1. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
+
+#### google_script/calendar.js
+**By [NavePnow](https://github.com/NavePnow)**
+**powered by Google Script and Google Developers Console**
+
+### JSBox
+
+#### JSBox/NUS_NextBus.js
+**By [NavePnow](https://github.com/NavePnow)**
+
+<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_2407.PNG" height="40%" width="40%">
+
+1. 特点
+   1. 检测用户所在位置信息进行公交站点筛选
+   2. 显示公交站点详细信息
+2. 步骤
+   1. 利用`Erots`商店进行脚本的下载 [脚本链接](https://liuguogy.github.io/JSBox-addins/?q=show&objectId=5e64e01e73f4b700096a1fd9)
+   2. 在小组件中进行设置，调整高度 (推荐: 180)
+3.  注意⚠️
+    1. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
+
+#### JSBox/Singtel+.js
+**By [NavePnow](https://github.com/NavePnow)**
+**UI inspired by [lchreal6](https://github.com/lchreal6)**
+<img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_2419.PNG" height="40%" width="40%">
+
+1. 特点
+   1. 显示剩余话费，流量，短信和电话相关信息
+2. 步骤
+   1. 利用`Erots`商店进行脚本的下载 [脚本链接](https://liuguogy.github.io/JSBox-addins/?q=show&objectId=5e67326840595e0008b5481f)
+   2. 安装抓包软件，例如 [HTTP Catcher](https://apps.apple.com/us/app/http-catcher/id1445874902)
+   3. 安装 [hi!App](https://apps.apple.com/us/app/singtel-prepaid-hi-app/id1034712778) 软件，并利用自己的手机号进行登录
+   4. 打开抓包软件进行抓包，刷新 `hi!App` (重新打开)
+   5. 在网络请求中找到 `https://hiapp.aws.singtel.com/api/v2/usage/dashboard`
+   6. 记下请求头中的 `Authorization` 和 `Cookie`，代替脚本中的关键词
+   7. 在小组件中进行设置，调整高度 (推荐: 180)
+3.  注意⚠️
+    1. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
+
+
 
 # Tip Jar
 
