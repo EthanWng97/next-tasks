@@ -142,10 +142,6 @@
 3.  注意⚠️
     1. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
-#### google_script/calendar.js
-**By [NavePnow](https://github.com/NavePnow)**
-**powered by Google Script and Google Developers Console**
-
 ### JSBox
 
 #### JSBox/NUS_NextBus.js
@@ -165,6 +161,7 @@
 #### JSBox/Singtel+.js
 **By [NavePnow](https://github.com/NavePnow)**
 **UI inspired by [lchreal6](https://github.com/lchreal6)**
+
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_2419.PNG" height="40%" width="40%">
 
 1. 特点
