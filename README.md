@@ -4,11 +4,11 @@
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/NavePnow)
 
 📖 文档 | 📖 [Docs](https://github.com/NavePnow/Profiles/blob/master/README_EN.md)
-
 Table of Contents
 =================
 
    * [Profiles](#profiles)
+   * [Table of Contents](#table-of-contents)
       * [Filter - Surge and QuantumultX 规则集](#filter---surge-and-quantumultx-规则集)
       * [Scripts](#scripts)
          * [Surge/QuantumultX](#surgequantumultx)
@@ -21,6 +21,7 @@ Table of Contents
          * [Google Apps Script](#google-apps-script)
             * [google_script/singtel.js](#google_scriptsingteljs)
             * [google_script/calendar.js](#google_scriptcalendarjs)
+            * [google_script/ss-checkin.js](#google_scriptss-checkinjs)
          * [JSBox](#jsbox)
             * [JSBox/NUS_NextBus.js](#jsboxnus_nextbusjs)
             * [JSBox/Singtel .js](#jsboxsingteljs)
