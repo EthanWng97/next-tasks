@@ -173,7 +173,7 @@ Table of Contents
 3.  注意⚠️
     1. 如果有问题，欢迎 [反馈](https://t.me/Leped_Bot) 
 
-#### google_script/ss-checkin.js
+#### [google_script/ss-checkin.js](https://raw.githubusercontent.com/NavePnow/Profiles/master/Scripts/google_script/ss-checkin.js)
 **By [Neurogram](https://github.com/Neurogram-R) feat [NavePnow](https://github.com/NavePnow)**
 
 **powered by Google Script and Google Developers Console**
