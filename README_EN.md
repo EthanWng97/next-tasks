@@ -21,6 +21,7 @@ Table of Contents
          * [Google Apps Script](#google-apps-script)
             * [google_script/singtel.js](#google_scriptsingteljs)
             * [google_script/calendar.js](#google_scriptcalendarjs)
+            * [google_script/ss-checkin.js](#google_scriptss-checkinjs)
          * [JSBox](#jsbox)
             * [JSBox/NUS_NextBus.js](#jsboxnus_nextbusjs)
             * [JSBox/Singtel .js](#jsboxsingteljs)
