@@ -35,6 +35,7 @@ Table of Contents
 
 #### filter_conversion.js
 **By [NavePnow](https://github.com/NavePnow)**
+
 **powered by CLOUDFLARE Workers**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/process.jpeg" height="60%" width="60%">
@@ -91,6 +92,7 @@ Table of Contents
 
 #### weather.js/weather_qx.js
 **By [NavePnow](https://github.com/NavePnow)**
+
 **powered by Dark Sky**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_0886.jpg" height="40%" width="40%">
@@ -114,6 +116,7 @@ Table of Contents
 
 #### weibo
 **By [NavePnow](https://github.com/NavePnow)**
+
 **inspired by [Nobyda](https://t.me/nubida)**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_1189.JPG" height="40%" width="40%">
@@ -125,6 +128,7 @@ Table of Contents
 
 #### google_script/singtel.js
 **By [NavePnow](https://github.com/NavePnow)**
+
 **powered by Google Script**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_1888.jpg" height="40%" width="40%">
@@ -148,6 +152,7 @@ Table of Contents
 
 #### google_script/calendar.js
 **By [NavePnow](https://github.com/NavePnow)**
+
 **powered by Google Script and Google Developers Console**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/IMG_1925.jpg" height="35%" width="35%">
@@ -170,6 +175,7 @@ Table of Contents
 
 #### google_script/ss-checkin.js
 **By [Neurogram](https://github.com/Neurogram-R) feat [NavePnow](https://github.com/NavePnow)**
+
 **powered by Google Script and Google Developers Console**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/ss-checkin.jpg" height="40%" width="40%">
@@ -209,6 +215,7 @@ Table of Contents
 
 #### JSBox/Singtel+.js
 **By [NavePnow](https://github.com/NavePnow)**
+
 **UI inspired by [lchreal6](https://github.com/lchreal6)**
 
 <img src="https://cdn.jsdelivr.net/gh/NavePnow/blog_photo@private/singtel+.jpg" height="30%" width="30%">
