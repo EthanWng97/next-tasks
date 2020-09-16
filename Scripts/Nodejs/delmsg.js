@@ -15,27 +15,8 @@ var url = "https://api.telegram.org/bot" + token;
 const request = require('request');
 const fs = require("fs");
 
-// function originalData(estring) {
-//     var payload = {
-//         "method": "sendMessage",
-//         "chat_id": chat_id,
-//         "text": estring,
-//         "parse_mode": "Markdown",
-//     };
-//     sendMsg(payload)
-// }
-
-// function sendMsg(payload) {
-//     var options = {
-//         'method': 'post',
-//         'payload': payload
-//     };
-
-//     console.log(UrlFetchApp.fetch(url + "/", options))
-// }
-
-function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+function sleep(delay) {
+    for (var t = Date.now(); Date.now() - t <= delay;);
 }
 
 function getStartID() {
@@ -62,21 +43,17 @@ function getOriginalData(startID){
     })
 }
 
-async function delMessage(startID, data) {
+function delMessage(startID, data) {
     // delete message
-    // value = 0
     if (data != "") {
         for (i = 0; i < data.length; i++) {
             try {
-                console.log(i)
+                sleep(50);
                 request({
                     url: url + "/deleteMessage?chat_id=" + chat_id + "&message_id=" + data[i].message.message_id,
-                })
-                await sleep(10);
-                // UrlFetchApp.fetch(url + "/deleteMessage?chat_id=" + chat_id + "&message_id=" + data[i].message.message_id, options);
+                });
             } catch (e) {
-                //count += 1
-                //if (count >= 3) break;
+                console.log(e)
             }
         }
 
@@ -91,10 +68,7 @@ async function delMessage(startID, data) {
                 delMessage(startID, data)
             }
         })
-        // updateResults = UrlFetchApp.fetch(url + "/getUpdates?offset=" + value, options);
-        // data = JSON.parse(updateResults.getContentText()).result;
-    }
-    else delWipe(startID);
+    } else delWipe(startID);
 
 }
 
@@ -104,7 +78,6 @@ function delWipe(startID) {
         url: url + "/deleteMessage?chat_id=" + chat_id + "&message_id=" + startID,
         json: true
     })
-    // UrlFetchApp.fetch(url + "/deleteMessage?chat_id=" + chat_id + "&message_id=" + startID, options);
     delWelcome()
 }
 
@@ -119,17 +92,10 @@ function delWelcome(){
             request({
                 url: url + "/deleteMessage?chat_id=" + chat_id + "&message_id=" + data.toString(),
             })
-            // UrlFetchApp.fetch(url + "/deleteMessage?chat_id=" + chat_id + "&message_id=" + endID, options);
         } catch (e) {
         }
     });
     printWelome()
-    // endID = SheetName.getSheetValues(1, 1, 1, 1)[0][0];
-    // try {
-    //     UrlFetchApp.fetch(url + "/deleteMessage?chat_id=" + chat_id + "&message_id=" + endID, options);
-    // } catch (e) {
-    // }
-
 }
 
 function printWelome(){
@@ -143,10 +109,6 @@ function printWelome(){
             savetoFile(endID)
         }
     })
-    // print welcome to eastworld
-    // var endRst = UrlFetchApp.fetch(url + "/sendMessage?chat_id=" + chat_id + "&text=Welcome%20to%20Eastworld!", options);
-    // endID = JSON.parse(endRst.getContentText()).result.message_id;
-    // SheetName.getRange(LastRow, 1).setValue(endID);
 }
 
 function savetoFile(endID){
@@ -156,8 +118,6 @@ function savetoFile(endID){
         }
     });
 }
-
-
 
 const schedule = require('node-schedule');
 
