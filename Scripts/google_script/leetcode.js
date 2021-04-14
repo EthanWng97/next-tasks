@@ -67,21 +67,31 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
         var content = JSON.parse(response).data.question.content;
         var difficulty = JSON.parse(response).data.question.difficulty;
         if (difficulty == 'Easy') difficulty = '🟢';
-        else if (difficulty == 'Easy') difficulty = '🟡';
+        else if (difficulty == 'Medium') difficulty = '🟡';
         else difficulty = '🔴';
 
         var description_pattern = /(?=<p>)(.*)?(?=<\/p>)/g;
-        description = content.match(description_pattern)[0];
-        description = description.replace("<p>", "");
-        description = description.replace("</p>", "");
+        var description;
+        if (content.match(description_pattern)) {
+            description = content.match(description_pattern)[0];
+            description = description.replace("<p>", "");
+            description = description.replace("</p>", "");
+        }
 
         var example_pattern = /<pre>[\s\S]*?<\/pre>/g;
-        var example = content.match(example_pattern)[0];
-        example = example.replace("</p>", "");
+        var example;
+        if (content.match(example_pattern)) {
+            example = content.match(example_pattern)[0];
+            example = example.replace("</p>", "");
+        }
 
-        var pattern_image = /src="[\s\S]*?(?=" style)/g
-        var image = content.match(pattern_image)[0];
-        image = image.replace("src=\"", "");
+        var pattern_image = /src="[\s\S]*?(?=" style)/g;
+        var image;
+        if (content.match(pattern_image)) {
+            image = content.match(pattern_image)[0];
+            image = image.replace("src=\"", "");
+        }
+
         image = "<a href=\"" + image + "\"> " + difficulty + "</a>";
 
         var topicTags = JSON.parse(response).data.question.topicTags;
