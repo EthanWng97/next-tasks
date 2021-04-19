@@ -50,8 +50,19 @@ function getLeetcode() {
 
 }
 
+String.prototype.replaceAll = function (FindText, RepText) {
+    regExp = new RegExp(FindText, "g");
+    return this.replace(regExp, RepText);
+}
+
+function deleteDoubleBr(string) {
+    regExp = new RegExp("\n\n", "g");
+    if (string.match(regExp)) {
+        return deleteDoubleBr(string.replace(regExp, "\n"));
+    } else return string.replace(regExp, "\n");
+}
+
 function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
-    Logger.log(questionTitleSlug);
     var payload = "{\"operationName\": \"questionData\", \"variables\":{\"titleSlug\": \"" + questionTitleSlug + "\"}, \"query\": \"query questionData($titleSlug: String!) {  question(titleSlug: $titleSlug) {    questionId    questionFrontendId    boundTopicId    title    titleSlug    content    translatedTitle    translatedContent    isPaidOnly    difficulty    likes    dislikes    isLiked    similarQuestions    exampleTestcases    contributors {      username      profileUrl      avatarUrl      __typename    }    topicTags {      name      slug      translatedName      __typename    }    companyTagStats    codeSnippets {      lang      langSlug      code      __typename    }    stats    hints    solution {      id      canSeeDetail      paidOnly      hasVideoSolution      paidOnlyVideo      __typename    }    status    sampleTestCase    metaData    judgerAvailable    judgeType    mysqlSchemas    enableRunCode    enableTestMode    enableDebugger    envInfo    libraryUrl    adminUrl    __typename  }}\"}";
     var options = {
         'method': 'post',
@@ -70,20 +81,31 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
         else if (difficulty == 'Medium') difficulty = '🟡';
         else difficulty = '🔴';
 
-        var description_pattern = /(?=<p>)(.*)?(?=<\/p>)/g;
+        var description_pattern = /<p>[\s\S]*?(?=<p>&nbsp;<\/p>)/g;
         var description;
         if (content.match(description_pattern)) {
             description = content.match(description_pattern)[0];
-            description = description.replace("<p>", "");
-            description = description.replace("</p>", "");
+            description = description.replaceAll("&nbsp;", " ");
+            description = description.replaceAll("<p>", "");
+            description = description.replaceAll("</p>", "");
+            description = description.replaceAll("<ul>", "");
+            description = description.replaceAll("</ul>", "");
+            description = description.replaceAll("<li>", "");
+            description = description.replaceAll("</li>", "");
+            description = description.replaceAll("<ol>", "");
+            description = description.replaceAll("</ol>", "");
+            // description = deleteDoubleBr(description);
         }
+        description = '<strong>2️⃣ Description \n</strong>' + description;
 
         var example_pattern = /<pre>[\s\S]*?<\/pre>/g;
         var example;
         if (content.match(example_pattern)) {
             example = content.match(example_pattern)[0];
-            example = example.replace("</p>", "");
+            example = example.replaceAll("&nbsp;", " ");
+            example = example.replaceAll("</p>", "");
         }
+        example = '<strong>3️⃣ Example</strong>' + example;
 
         var pattern_image = /src="[\s\S]*?(?=" style)/g;
         var image;
@@ -95,12 +117,13 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
         image = "<a href=\"" + image + "\"> " + difficulty + "</a>";
 
         var topicTags = JSON.parse(response).data.question.topicTags;
-        Logger.log(topicTags);
         var tags = "";
         for (var val in topicTags) {
             tags += "#" + topicTags[val].slug + " ";
         }
-        originalData(date + '\n' + image + ' <b>' + title + '</b>\n' + tags + '\n\n' + description + '\n' + example, cn_link, en_link);
+        tags = '<strong>1️⃣ Tags\n</strong>' + tags;
+
+        originalData(date + '\n' + image + ' <b>' + title + '</b>\n\n' + tags + '\n\n' + description + example, cn_link, en_link);
     }
 }
 
