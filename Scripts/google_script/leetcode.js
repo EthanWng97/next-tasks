@@ -98,7 +98,7 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
         }
         description = '<strong>2️⃣ Description \n</strong>' + description;
 
-        var example_pattern = /<pre>[\s\S]*?<\/pre>/g;
+        var example_pattern = /<pre>\n<strong>[\s\S]*?<\/pre>/g;
         var example;
         if (content.match(example_pattern)) {
             example = content.match(example_pattern)[0];
@@ -114,7 +114,7 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
             image = image.replace("src=\"", "");
         }
 
-        image = "<a href=\"" + image + "\"> " + difficulty + "</a>";
+        image = "<a href=\"" + image + "\">" + difficulty + "</a>";
 
         var topicTags = JSON.parse(response).data.question.topicTags;
         var tags = "";
