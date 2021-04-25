@@ -98,14 +98,14 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
         }
         description = '<strong>2️⃣ Description \n</strong>' + description;
 
-        var example_pattern = /<pre>\n<strong>[\s\S]*?<\/pre>/g;
+        var example_pattern = /<strong>Input[\s\S]*?(?=<\/pre>)/g;
         var example;
         if (content.match(example_pattern)) {
             example = content.match(example_pattern)[0];
             example = example.replaceAll("&nbsp;", " ");
             example = example.replaceAll("</p>", "");
         }
-        example = '<strong>3️⃣ Example</strong>' + example;
+        example = '<strong>3️⃣ Example</strong>\n<pre>' + example + '</pre>';
 
         var pattern_image = /src="[\s\S]*?(?=" style)/g;
         var image;
