@@ -94,6 +94,8 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
             description = description.replaceAll("</li>", "");
             description = description.replaceAll("<ol>", "");
             description = description.replaceAll("</ol>", "");
+            description = description.replaceAll("<sup>", "");
+            description = description.replaceAll("</sup>", "");
             // description = deleteDoubleBr(description);
         }
         description = '<strong>2️⃣ Description \n</strong>' + description;
