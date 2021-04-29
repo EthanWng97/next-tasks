@@ -45,7 +45,9 @@ function getLeetcode() {
         var title = questionFrontendId + "." + questionTitleSlug;
         var cn_link = "https://leetcode-cn.com/problems/" + questionTitleSlug;
         var en_link = "https://leetcode.com/problems/" + questionTitleSlug;
-        getDetails(questionTitleSlug, date, title, cn_link, en_link);
+        var cn_solution_link = cn_link + "/solution";
+        var en_solution_link = en_link + "/solution";
+        getDetails(questionTitleSlug, date, title, cn_link, en_link, cn_solution_link, en_solution_link);
     }
 
 }
@@ -62,7 +64,7 @@ function deleteDoubleBr(string) {
     } else return string.replace(regExp, "\n");
 }
 
-function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
+function getDetails(questionTitleSlug, date, title, cn_link, en_link, cn_solution_link, en_solution_link) {
     var payload = "{\"operationName\": \"questionData\", \"variables\":{\"titleSlug\": \"" + questionTitleSlug + "\"}, \"query\": \"query questionData($titleSlug: String!) {  question(titleSlug: $titleSlug) {    questionId    questionFrontendId    boundTopicId    title    titleSlug    content    translatedTitle    translatedContent    isPaidOnly    difficulty    likes    dislikes    isLiked    similarQuestions    exampleTestcases    contributors {      username      profileUrl      avatarUrl      __typename    }    topicTags {      name      slug      translatedName      __typename    }    companyTagStats    codeSnippets {      lang      langSlug      code      __typename    }    stats    hints    solution {      id      canSeeDetail      paidOnly      hasVideoSolution      paidOnlyVideo      __typename    }    status    sampleTestCase    metaData    judgerAvailable    judgeType    mysqlSchemas    enableRunCode    enableTestMode    enableDebugger    envInfo    libraryUrl    adminUrl    __typename  }}\"}";
     var options = {
         'method': 'post',
@@ -80,7 +82,6 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
         if (difficulty == 'Easy') difficulty = '🟢';
         else if (difficulty == 'Medium') difficulty = '🟡';
         else difficulty = '🔴';
-
         var description_pattern = /<p>[\s\S]*?(?=<p>&nbsp;<\/p>)/g;
         var description;
         if (content.match(description_pattern)) {
@@ -125,11 +126,11 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link) {
         }
         tags = '<strong>1️⃣ Tags\n</strong>' + tags;
 
-        originalData(date + '\n' + image + ' <b>' + title + '</b>\n\n' + tags + '\n\n' + description + example, cn_link, en_link);
+        originalData(date + '\n' + image + ' <b>' + title + '</b>\n\n' + tags + '\n\n' + description + example, cn_link, en_link, cn_solution_link, en_solution_link);
     }
 }
 
-function originalData(estring, cn_link, en_link) {
+function originalData(estring, cn_link, en_link, cn_solution_link, en_solution_link) {
     var payload = {
         "method": "sendMessage",
         "chat_id": chat_id,
@@ -138,11 +139,13 @@ function originalData(estring, cn_link, en_link) {
         "reply_markup": "{\"inline_keyboard\" : [" +
             "[" +
             "{\"text\":\"CN\", \"url\" : \"" + cn_link + "\"}," +
-            "{\"text\":\"EN\", \"url\" : \"" + en_link + "\"}" +
+            "{\"text\":\"CN Solution\", \"url\" : \"" + cn_solution_link + "\"}" +
+            "]," +
+            "[" +
+            "{\"text\":\"EN\", \"url\" : \"" + en_link + "\"}," +
+            "{\"text\":\"EN Solution\", \"url\" : \"" + en_solution_link + "\"}" +
             "]" +
             "]}"
-
-
     };
     sendMsg(payload)
 }
