@@ -82,10 +82,12 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link, cn_solutio
         if (difficulty == 'Easy') difficulty = '🟢';
         else if (difficulty == 'Medium') difficulty = '🟡';
         else difficulty = '🔴';
-        var description_pattern = /<p>[\s\S]*?(?=<p>&nbsp;<\/p>)/g;
+        var description_pattern = /<p>[\s\S]*?(?=Example)/g;
         var description;
         if (content.match(description_pattern)) {
             description = content.match(description_pattern)[0];
+            description = description.replaceAll("<p><strong>", "");
+            description = description.replaceAll("<p><b>", "");
             description = description.replaceAll("&nbsp;", " ");
             description = description.replaceAll("<p>", "");
             description = description.replaceAll("</p>", "");
@@ -101,10 +103,15 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link, cn_solutio
         }
         description = '<strong>2️⃣ Description \n</strong>' + description;
 
-        var example_pattern = /<strong>Input[\s\S]*?(?=<\/pre>)/g;
+        var example_pattern_1 = /<strong>Input[\s\S]*?(?=<\/pre>)/g;
+        var example_pattern_2 = /<b>Input[\s\S]*?(?=<\/pre>)/g;
         var example;
-        if (content.match(example_pattern)) {
-            example = content.match(example_pattern)[0];
+        if (content.match(example_pattern_1)) {
+            example = content.match(example_pattern_1)[0];
+            example = example.replaceAll("&nbsp;", " ");
+            example = example.replaceAll("</p>", "");
+        } else if (content.match(example_pattern_2)) {
+            example = content.match(example_pattern_2)[0];
             example = example.replaceAll("&nbsp;", " ");
             example = example.replaceAll("</p>", "");
         }
