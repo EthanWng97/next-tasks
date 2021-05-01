@@ -131,6 +131,7 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link, cn_solutio
         for (var val in topicTags) {
             tags += "#" + topicTags[val].slug + " ";
         }
+        tags = tags.replaceAll("-", "_");
         tags = '<strong>1️⃣ Tags\n</strong>' + tags;
 
         originalData(date + '\n' + image + ' <b>' + title + '</b>\n\n' + tags + '\n\n' + description + example, cn_link, en_link, cn_solution_link, en_solution_link);
