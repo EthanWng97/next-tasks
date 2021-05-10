@@ -88,6 +88,7 @@ function getDetails(questionTitleSlug, date, title, cn_link, en_link, cn_solutio
             description = content.match(description_pattern)[0];
             description = description.replaceAll(/<font[\s\S]*?>/g, "");
             description = description.replaceAll("</font>", "");
+            description = description.replaceAll(/<p><img[\s\S]*?<\/p>/g, "");
             description = description.replaceAll("<p>&nbsp;</p>\n<p><strong>", "");
             description = description.replaceAll("<p>&nbsp;</p>\n<p><b>", "");
             description = description.replaceAll("&nbsp;", " ");
