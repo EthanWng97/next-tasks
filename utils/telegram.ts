@@ -1,4 +1,4 @@
-export async function sendDocument(question: any, file: any) {
+export const sendDocument = async (question: any, file: any) => {
   const caption =
     "<b>Leetcode.com " +
     question.date +
@@ -45,4 +45,4 @@ export async function sendDocument(question: any, file: any) {
   url = url.concat("/");
 
   await fetch(url, options);
-}
+};

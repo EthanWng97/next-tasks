@@ -1,4 +1,4 @@
-export async function getEnDailyQuestion(): any {
+export const getEnDailyQuestion = async () => {
   const dailyQuestionPayload = {
     query: `query questionOfToday {
             activeDailyCodingChallengeQuestion {
@@ -20,14 +20,17 @@ export async function getEnDailyQuestion(): any {
     },
     body: JSON.stringify(dailyQuestionPayload),
   };
-  let response = await fetch(process.env.LEETCODE_EN_HOST + "/graphql", options);
+  let response = await fetch(
+    process.env.LEETCODE_EN_HOST + "/graphql",
+    options
+  );
   if (response.status == 200) {
     let data = await response.json();
     return data;
   } else return response.statusText;
-}
+};
 
-export async function getQuestionDetails(questionTitleSlug: string) {
+export const getQuestionDetails = async (questionTitleSlug: string) => {
   const detailsPayload = {
     operationName: "questionData",
     query: `query questionData($titleSlug: String!) {
@@ -60,10 +63,12 @@ export async function getQuestionDetails(questionTitleSlug: string) {
     },
     body: JSON.stringify(detailsPayload),
   };
-  let response = await fetch(process.env.LEETCODE_EN_HOST + "/graphql", options);
+  let response = await fetch(
+    process.env.LEETCODE_EN_HOST + "/graphql",
+    options
+  );
   if (response.status == 200) {
     let data = await response.json();
     return data;
   } else return response.statusText;
-}
-
+};
