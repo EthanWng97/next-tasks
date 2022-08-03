@@ -12,7 +12,7 @@ export const sendDocument = async (question: any, file: any) => {
     "<strong>🏷️ Tags\n</strong>" +
     question.tags;
 
-  const reply_markup =
+  const replyMarkup =
     '{"inline_keyboard" : [' +
     "[" +
     '{"text":"Source", "url" : "' +
@@ -34,7 +34,7 @@ export const sendDocument = async (question: any, file: any) => {
   );
   formData.append("caption", caption);
   formData.append("parse_mode", "Html");
-  formData.append("reply_markup", reply_markup);
+  formData.append("reply_markup", replyMarkup);
 
   const options = {
     method: "POST",

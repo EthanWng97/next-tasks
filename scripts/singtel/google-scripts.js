@@ -15,88 +15,117 @@ Feedback: https://t.me/Leped_Bot
 
 */
 
-var token = 'BOT_TOKEN';
+var token = "BOT_TOKEN";
 var chat_id = "CHAT_ID";
-var Authorization = 'AUTH';
-var Cookie = 'COOKIE';
+var Authorization = "AUTH";
+var Cookie = "COOKIE";
 
 var url = "https://api.telegram.org/bot" + token;
 function originalData(estring) {
-    var payload = {
-        "method": "sendMessage",
-        "chat_id": chat_id,
-        "text": estring,
-        "parse_mode": "Markdown",
-    };
-    sendMsg(payload)
+  var payload = {
+    method: "sendMessage",
+    chat_id: chat_id,
+    text: estring,
+    parse_mode: "Markdown",
+  };
+  sendMsg(payload);
 }
 
 function sendMsg(payload) {
-    var options = {
-        'method': 'post',
-        'payload': payload
-    };
+  var options = {
+    method: "post",
+    payload: payload,
+  };
 
-    UrlFetchApp.fetch(url + "/", options)
+  UrlFetchApp.fetch(url + "/", options);
 }
 
 function getMe(id, text) {
-    var response = UrlFetchApp.fetch(url + "/getMe");
-    Logger.log(response.getContentText())
-    //parse_mode = parse_mode || '';
-    //return this.getResponse("sendMessage", {chat_id: ''+chatId, text: text, parse_mode: parse_mode}).getContentText();
+  var response = UrlFetchApp.fetch(url + "/getMe");
+  Logger.log(response.getContentText());
+  //parse_mode = parse_mode || '';
+  //return this.getResponse("sendMessage", {chat_id: ''+chatId, text: text, parse_mode: parse_mode}).getContentText();
 }
 
 function getUpdates(id, text) {
-    var response = UrlFetchApp.fetch(url + "/getUpdates");
-    Logger.log(response.getContentText())
-    //parse_mode = parse_mode || '';
-    //return this.getResponse("sendMessage", {chat_id: ''+chatId, text: text, parse_mode: parse_mode}).getContentText();
+  var response = UrlFetchApp.fetch(url + "/getUpdates");
+  Logger.log(response.getContentText());
+  //parse_mode = parse_mode || '';
+  //return this.getResponse("sendMessage", {chat_id: ''+chatId, text: text, parse_mode: parse_mode}).getContentText();
 }
 
 function singtel() {
-    var formData = {
-        'Authorization': Authorization,
-        'Content-Type': 'application/json',
-        'Cookie': Cookie,
-        'X-APP-DEVICE-PLATFORM': 'iOS',
-        'X-APP-DEVICE-VERSION': '13.3.1',
-        'X-APP-VERSION': '3.2.2'
+  var formData = {
+    Authorization: Authorization,
+    "Content-Type": "application/json",
+    Cookie: Cookie,
+    "X-APP-DEVICE-PLATFORM": "iOS",
+    "X-APP-DEVICE-VERSION": "13.3.1",
+    "X-APP-VERSION": "3.2.2",
+  };
+  var options = {
+    method: "get",
+    headers: formData,
+  };
+  var response = UrlFetchApp.fetch(
+    "https://hiapp.aws.singtel.com/api/v2/usage/dashboard",
+    options
+  );
+  if (!response) {
+    originalData("Singtel error: failed to fetch data!");
+  } else {
+    //Logger.log(response.getContentText())
+    var obj = JSON.parse(response.getContentText());
+    //Logger.log(obj)
+    var number = obj.accountInfo.number;
+    var balance = obj.accountInfo.balance;
+    var expiry = obj.accountInfo.expiry;
+    var total_text = "MAIN ACCOUNT " + number + " " + balance + " " + expiry;
+    var local_data = obj.cards[0].items[0].amount;
+    var i = 0;
+    var local_calls;
+    var local_sms;
+    var idd_calls;
+    for (var i; i < obj.cards[1].items.length; i++) {
+      if (obj.cards[1].items[i].description == "LOCAL CALLS")
+        local_calls = obj.cards[1].items[i].amount;
+      if (obj.cards[1].items[i].description == "LOCAL SMS")
+        local_sms = obj.cards[1].items[i].amount;
+      if (obj.cards[1].items[i].description == "IDD CALLS")
+        idd_calls = obj.cards[1].items[i].amount;
     }
-    var options = {
-        'method': 'get',
-        'headers': formData
-    };
-    var response = UrlFetchApp.fetch('https://hiapp.aws.singtel.com/api/v2/usage/dashboard', options);
-    if (!response) {
-        originalData("Singtel error: failed to fetch data!");
-    } else {
-        //Logger.log(response.getContentText())
-        var obj = JSON.parse(response.getContentText());
-        //Logger.log(obj)
-        var number = obj.accountInfo.number;
-        var balance = obj.accountInfo.balance;
-        var expiry = obj.accountInfo.expiry;
-        var total_text = "MAIN ACCOUNT " + number + " " + balance + " " + expiry;
-        var local_data = obj.cards[0].items[0].amount;
-        var i = 0;
-        var local_calls;
-        var local_sms;
-        var idd_calls;
-        for (var i; i < obj.cards[1].items.length; i++) {
-            if (obj.cards[1].items[i].description == "LOCAL CALLS") local_calls = obj.cards[1].items[i].amount;
-            if (obj.cards[1].items[i].description == "LOCAL SMS") local_sms = obj.cards[1].items[i].amount;
-            if (obj.cards[1].items[i].description == "IDD CALLS") idd_calls = obj.cards[1].items[i].amount;
-        }
-        Logger.log(i)
-        Logger.log(local_data)
-        Logger.log(local_calls)
-        Logger.log(local_sms)
-        Logger.log(idd_calls)
-        var info_text;
-        if(idd_calls) info_text= "\*Singtel* 90508390\n" + balance + " " + expiry + " \nLOCAL DATA: " + local_data + "\nLOCAL CALLS: " + local_calls + "\nLOCAL SMS: " + local_sms + "\nIDD CALLS: " + idd_calls;
-        else info_text= "\*Singtel* 90508390\n" + balance + " " + expiry + " \nLOCAL DATA: " + local_data + "\nLOCAL CALLS: " + local_calls + "\nLOCAL SMS: " + local_sms;
-        originalData(info_text);
-
-    }
+    Logger.log(i);
+    Logger.log(local_data);
+    Logger.log(local_calls);
+    Logger.log(local_sms);
+    Logger.log(idd_calls);
+    var info_text;
+    if (idd_calls)
+      info_text =
+        "*Singtel* 90508390\n" +
+        balance +
+        " " +
+        expiry +
+        " \nLOCAL DATA: " +
+        local_data +
+        "\nLOCAL CALLS: " +
+        local_calls +
+        "\nLOCAL SMS: " +
+        local_sms +
+        "\nIDD CALLS: " +
+        idd_calls;
+    else
+      info_text =
+        "*Singtel* 90508390\n" +
+        balance +
+        " " +
+        expiry +
+        " \nLOCAL DATA: " +
+        local_data +
+        "\nLOCAL CALLS: " +
+        local_calls +
+        "\nLOCAL SMS: " +
+        local_sms;
+    originalData(info_text);
+  }
 }

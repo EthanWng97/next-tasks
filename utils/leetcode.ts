@@ -20,12 +20,12 @@ export const getEnDailyQuestion = async () => {
     },
     body: JSON.stringify(dailyQuestionPayload),
   };
-  let response = await fetch(
+  const response = await fetch(
     process.env.LEETCODE_EN_HOST + "/graphql",
     options
   );
   if (response.status == 200) {
-    let data = await response.json();
+    const data = await response.json();
     return data;
   } else return response.statusText;
 };
@@ -63,12 +63,12 @@ export const getQuestionDetails = async (questionTitleSlug: string) => {
     },
     body: JSON.stringify(detailsPayload),
   };
-  let response = await fetch(
+  const response = await fetch(
     process.env.LEETCODE_EN_HOST + "/graphql",
     options
   );
   if (response.status == 200) {
-    let data = await response.json();
+    const data = await response.json();
     return data;
   } else return response.statusText;
 };

@@ -25,9 +25,10 @@
     "max-len": [
       "error",
       {
-        "code": 120
+        "code": 150
       }
     ],
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "require-jsdoc": 0
   }
 }

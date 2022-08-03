@@ -1,8 +1,8 @@
 <h1 align="center">Evan Scripts</h1>
 
-[![](https://img.shields.io/github/stars/NavePnow/Profiles.svg?logo=github&color=lightgrey)](https://github.com/NavePnow/Profiles) 
-[![](https://img.shields.io/github/forks/NavePnow/Profiles.svg?logo=github&color=lightgrey)](https://github.com/NavePnow/Profiles) 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) 
+[![](https://img.shields.io/github/stars/NavePnow/Profiles.svg?logo=github&color=lightgrey)](https://github.com/NavePnow/Profiles)
+[![](https://img.shields.io/github/forks/NavePnow/Profiles.svg?logo=github&color=lightgrey)](https://github.com/NavePnow/Profiles)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/NavePnow)
 
 ## Roadmap :blue_car:
