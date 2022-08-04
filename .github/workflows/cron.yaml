@@ -1,7 +1,7 @@
-name: 15-minute-cron
+name: leetcode/dailyquestion/en cron
 on:
   schedule:
-    - cron: "30 16 * * *"
+    - cron: "00 16 * * *"
 jobs:
   cron:
     runs-on: ubuntu-latest
@@ -9,4 +9,6 @@ jobs:
       - name: Call our API route
         run: |
           curl --request GET \
-          --url 'https://next-scripts-git-master-navepnow.vercel.app/api/leetcode-en'
+          --url 'https://next-scripts.vercel.app/api/leetcode/dailyquestion/en' \
+          curl --request GET \
+          --url 'https://next-scripts.vercel.app/api/leetcode/dailyquestion/cn'
