@@ -21,7 +21,7 @@ function GetNearestLoc(lat, lng) {
   $http.get({
     url: "https://nnextbus.nus.edu.sg/BusStops",
     header: {
-      Authorization: "Basic TlVTbmV4dGJ1czoxM2RMP3pZLDNmZVdSXiJU",
+      Authorization: process.env.NUS_BUS_AUTH,
     },
     handler: function (resp) {
       let data = resp.data;
@@ -69,7 +69,7 @@ function GetInfo(name, caption) {
   $http.get({
     url: "https://nnextbus.nus.edu.sg/ShuttleService?busstopname=" + name,
     header: {
-      Authorization: "Basic TlVTbmV4dGJ1czoxM2RMP3pZLDNmZVdSXiJU",
+      Authorization: process.env.NUS_BUS_AUTH,
     },
     handler: function (resp) {
       if (resp.data.errmsg) {
