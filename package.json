@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "18.6.3",
+    "@types/node-telegram-bot-api": "^0.57.1",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
@@ -31,8 +32,9 @@
     "eslint-config-google": "^0.14.0",
     "eslint-config-next": "12.2.3",
     "eslint-plugin-react": "^7.30.1",
+    "husky": "^8.0.1",
+    "node-telegram-bot-api": "^0.58.0",
     "prettier": "^2.7.1",
-    "typescript": "4.7.4",
-    "husky": "^8.0.0"
+    "typescript": "4.7.4"
   }
 }

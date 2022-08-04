@@ -1,48 +1,14 @@
-export const sendDocument = async (question: any, file: any) => {
-  const caption =
-    "<b>Leetcode.com " +
-    question.date +
-    "</b>\n" +
-    "<b>" +
-    question.difficulty +
-    question.frontedId +
-    "." +
-    question.titleSlug +
-    "</b>\n\n" +
-    "<strong>🏷️ Tags\n</strong>" +
-    question.tags;
+import TelegramBot from "node-telegram-bot-api";
 
-  const replyMarkup =
-    '{"inline_keyboard" : [' +
-    "[" +
-    '{"text":"Source", "url" : "' +
-    question.sourceLink +
-    '"},' +
-    '{"text":"Solution", "url" : "' +
-    question.solutionLink +
-    '"}' +
-    "]" +
-    "]}";
+export const sendDocument = async (
+  chatId: string,
+  document: Buffer,
+  options: any,
+  fileOptions: any
+) => {
+  const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN ?? "", {
+    polling: false,
+  });
 
-  const formData = new FormData();
-  formData.append("method", "sendDocument");
-  formData.append("chat_id", process.env.TELEGRAM_LEETCODE_CHAT_ID ?? "");
-  formData.append(
-    "document",
-    file,
-    question.frontedId + "." + question.titleSlug + ".html"
-  );
-  formData.append("caption", caption);
-  formData.append("parse_mode", "Html");
-  formData.append("reply_markup", replyMarkup);
-
-  const options = {
-    method: "POST",
-    body: formData,
-  };
-  let url = process.env.TELEGRAM_HOST ?? "";
-  url = url.concat(process.env.TELEGRAM_BOT_TOKEN ?? "");
-  url = url.concat("/");
-
-  await fetch(url, options);
+  await bot.sendDocument(chatId, document, options, fileOptions);
 };
