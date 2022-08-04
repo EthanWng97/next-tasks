@@ -24,10 +24,35 @@ export const getEnDailyQuestion = async () => {
     process.env.LEETCODE_EN_HOST + "/graphql",
     options
   );
-  if (response.status == 200) {
-    const data = await response.json();
-    return data;
-  } else return response.statusText;
+  return response;
+};
+
+export const getCnDailyQuestion = async () => {
+  const dailyQuestionPayload = {
+    query: `query questionOfToday {
+            todayRecord {
+                date
+                question {
+                    frontendQuestionId: questionFrontendId
+                    titleSlug
+                }
+            }
+        } `,
+    variables: {},
+  };
+
+  const options = {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(dailyQuestionPayload),
+  };
+  const response = await fetch(
+    process.env.LEETCODE_CN_HOST + "/graphql",
+    options
+  );
+  return response;
 };
 
 export const getQuestionDetails = async (questionTitleSlug: string) => {
@@ -64,11 +89,8 @@ export const getQuestionDetails = async (questionTitleSlug: string) => {
     body: JSON.stringify(detailsPayload),
   };
   const response = await fetch(
-    process.env.LEETCODE_EN_HOST + "/graphql",
+    process.env.LEETCODE_CN_HOST + "/graphql",
     options
   );
-  if (response.status == 200) {
-    const data = await response.json();
-    return data;
-  } else return response.statusText;
+  return response;
 };

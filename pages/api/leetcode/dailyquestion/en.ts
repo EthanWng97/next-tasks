@@ -2,13 +2,14 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getEnDailyQuestion, getQuestionDetails } from "@utils/leetcode";
 import { sendDocument } from "@utils/telegram";
 
-// type Data = {
-//   name: string;
-// };
+type ResponseError = {
+  code: number;
+  message: string;
+};
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<any>
+  res: NextApiResponse<ResponseError | any>
 ) {
   const question = {
     date: "",
@@ -20,7 +21,16 @@ export default async function handler(
     difficulty: "",
     tags: "",
   };
-  let data = await getEnDailyQuestion();
+
+  // fetch daily question
+  let response = await getEnDailyQuestion();
+  if (response.status != 200) {
+    res
+      .status(response.status)
+      .json({ code: response.status, message: response.statusText });
+  }
+  let data = await response.json();
+
   data = data.data.activeDailyCodingChallengeQuestion;
 
   question.date = data.date;
@@ -28,12 +38,20 @@ export default async function handler(
   question.solutionLink = question.sourceLink + "solution";
   question.titleSlug = data.question.titleSlug;
 
-  let details = await getQuestionDetails(question.titleSlug);
+  response = await getQuestionDetails(question.titleSlug);
+  if (response.status != 200) {
+    res
+      .status(response.status)
+      .json({ code: response.status, message: response.statusText });
+  }
+
   const emoji: { [key: string]: string } = {
     Medium: "🟡",
     Easy: "🟢",
     Hard: "🔴",
   };
+  let details = await response.json();
+
   details = details.data.question;
   question.content = details.content;
   question.frontedId = details.questionFrontendId;
@@ -48,7 +66,7 @@ export default async function handler(
   question.tags = topicTags.join(" ");
 
   const caption =
-    "<b>Leetcode.com " +
+    "<b>leetcode.com " +
     question.date +
     "</b>\n" +
     "<b>" +
@@ -64,7 +82,7 @@ export default async function handler(
 
   const fileOptions = {
     // Explicitly specify the file name.
-    filename: "test.html",
+    filename: question.frontedId + "." + question.titleSlug + ".html",
     // Explicitly specify the MIME type.
     contentType: "text/html",
   };
