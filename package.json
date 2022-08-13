@@ -25,7 +25,7 @@
     "@tailwindcss/typography": "^0.5.4",
     "@types/node": "18.7.2",
     "@types/node-telegram-bot-api": "^0.57.1",
-    "@types/react": "18.0.15",
+    "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.33.0",
