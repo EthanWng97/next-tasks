@@ -162,9 +162,9 @@
     "@types/node" "*"
     "@types/request" "*"
 
-"@types/node@*", "@types/node@18.7.10":
-  version "18.7.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.10.tgz#f642dc9ded1bdd8c2cd847246466e71182b0fd67"
+"@types/node@*", "@types/node@18.7.13":
+  version "18.7.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.13.tgz#23e6c5168333480d454243378b69e861ab5c011a"
 
 "@types/prop-types@*":
   version "15.7.5"
