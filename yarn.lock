@@ -445,7 +445,7 @@ bl@^1.2.3:
     readable-stream "^2.3.5"
     safe-buffer "^5.1.1"
 
-bluebird@^3.5.0, bluebird@^3.5.1:
+bluebird@^3.5.0:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
 
@@ -579,7 +579,7 @@ debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.0, debug@^3.2.7:
+debug@^3.2.7:
   version "3.2.7"
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.7.tgz"
   dependencies:
@@ -609,10 +609,6 @@ defined@^1.0.0:
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
-
-depd@^1.1.1:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
 
 detective@^5.2.1:
   version "5.2.1"
@@ -1538,15 +1534,13 @@ node-releases@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"
 
-node-telegram-bot-api@^0.58.0:
-  version "0.58.0"
-  resolved "https://registry.yarnpkg.com/node-telegram-bot-api/-/node-telegram-bot-api-0.58.0.tgz#4127a556bd584431ec74187e35af17d2d9b6ed48"
+node-telegram-bot-api@^0.59.0:
+  version "0.59.0"
+  resolved "https://registry.yarnpkg.com/node-telegram-bot-api/-/node-telegram-bot-api-0.59.0.tgz#0cd325258e8cfe22aba419b7ab3c6b09ae2ca398"
   dependencies:
     array.prototype.findindex "^2.0.2"
     bl "^1.2.3"
-    bluebird "^3.5.1"
-    debug "^3.1.0"
-    depd "^1.1.1"
+    debug "^3.2.7"
     eventemitter3 "^3.0.0"
     file-type "^3.9.0"
     mime "^1.6.0"
