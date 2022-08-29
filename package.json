@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",
-    "@types/node": "18.7.13",
+    "@types/node": "18.7.14",
     "@types/node-telegram-bot-api": "^0.57.1",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
