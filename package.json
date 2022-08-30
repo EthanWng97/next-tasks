@@ -35,7 +35,7 @@
     "eslint-config-next": "12.2.5",
     "eslint-plugin-react": "^7.31.0",
     "husky": "^8.0.1",
-    "node-telegram-bot-api": "^0.58.0",
+    "node-telegram-bot-api": "^0.59.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
