@@ -27,7 +27,7 @@
     "@types/node-telegram-bot-api": "^0.57.1",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "autoprefixer": "^10.4.8",
     "eslint": "^8.23.0",
