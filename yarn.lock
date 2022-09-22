@@ -181,9 +181,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.0.18":
-  version "18.0.18"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.18.tgz#9f16f33d57bc5d9dca848d12c3572110ff9429ac"
+"@types/react@*", "@types/react@18.0.21":
+  version "18.0.21"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.21.tgz#b8209e9626bb00a34c76f55482697edd2b43cc67"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
