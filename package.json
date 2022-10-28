@@ -24,7 +24,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",
     "@types/node": "18.11.7",
-    "@types/node-telegram-bot-api": "^0.57.1",
+    "@types/node-telegram-bot-api": "^0.57.6",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.36.2",

@@ -156,9 +156,9 @@
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
 
-"@types/node-telegram-bot-api@^0.57.1":
-  version "0.57.1"
-  resolved "https://registry.yarnpkg.com/@types/node-telegram-bot-api/-/node-telegram-bot-api-0.57.1.tgz#c55997d100f4eee954bf5e1a81424e844a2a5422"
+"@types/node-telegram-bot-api@^0.57.6":
+  version "0.57.6"
+  resolved "https://registry.yarnpkg.com/@types/node-telegram-bot-api/-/node-telegram-bot-api-0.57.6.tgz#4c194ec6492559039f88bcebc00c07384c852ea0"
   dependencies:
     "@types/node" "*"
     "@types/request" "*"
