@@ -1,4 +1,5 @@
-export const getEnDailyQuestion = async () => {
+import { LEETCODE_HOST_CN, LEETCODE_HOST_EN } from "@/utils/constants";
+export const getDailyQuestionEN = async () => {
   const dailyQuestionPayload = {
     query: `query questionOfToday {
             activeDailyCodingChallengeQuestion {
@@ -20,14 +21,11 @@ export const getEnDailyQuestion = async () => {
     },
     body: JSON.stringify(dailyQuestionPayload),
   };
-  const response = await fetch(
-    process.env.LEETCODE_EN_HOST + "/graphql",
-    options
-  );
+  const response = await fetch(LEETCODE_HOST_EN + "/graphql", options);
   return response;
 };
 
-export const getCnDailyQuestion = async () => {
+export const getDailyQuestionCN = async () => {
   const dailyQuestionPayload = {
     query: `query questionOfToday {
             todayRecord {
@@ -48,10 +46,7 @@ export const getCnDailyQuestion = async () => {
     },
     body: JSON.stringify(dailyQuestionPayload),
   };
-  const response = await fetch(
-    process.env.LEETCODE_CN_HOST + "/graphql",
-    options
-  );
+  const response = await fetch(LEETCODE_HOST_CN + "/graphql", options);
   return response;
 };
 
@@ -88,9 +83,7 @@ export const getQuestionDetails = async (questionTitleSlug: string) => {
     },
     body: JSON.stringify(detailsPayload),
   };
-  const response = await fetch(
-    process.env.LEETCODE_CN_HOST + "/graphql",
-    options
-  );
+  const response = await fetch(LEETCODE_HOST_CN + "/graphql", options);
   return response;
 };
+
