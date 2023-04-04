@@ -86,4 +86,3 @@ export const getQuestionDetails = async (questionTitleSlug: string) => {
   const response = await fetch(LEETCODE_HOST_CN + "/graphql", options);
   return response;
 };
-
