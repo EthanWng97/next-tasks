@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/rss2kindle",
+      "schedule": "* * * * *"
+    }
+  ]
+}
