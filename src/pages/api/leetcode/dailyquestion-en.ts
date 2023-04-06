@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getDailyQuestionCN, getQuestionDetails } from "@/utils/leetcode";
-import { sendDocument } from "@/utils/telegram";
-import { LEETCODE_HOST_CN } from "@/utils/constants";
+import { getDailyQuestionEN, getQuestionDetails } from "@/actions/leetcode";
+import { sendDocument } from "@/actions/telegram";
+import { LEETCODE_HOST_EN } from "@/utils/constants";
 
 type ResponseError = {
   code: number;
@@ -24,7 +24,7 @@ export default async function handler(
   };
 
   // fetch daily question
-  let response = await getDailyQuestionCN();
+  let response = await getDailyQuestionEN();
   if (response.status != 200) {
     res
       .status(response.status)
@@ -32,12 +32,12 @@ export default async function handler(
   }
   let data = await response.json();
 
-  data = data.data.todayRecord[0];
+  data = data.data.activeDailyCodingChallengeQuestion;
 
   question.date = data.date;
-  question.titleSlug = data.question.titleSlug;
-  question.sourceLink = LEETCODE_HOST_CN + "/problems/" + question.titleSlug;
+  question.sourceLink = LEETCODE_HOST_EN + data.link;
   question.solutionLink = question.sourceLink + "solution";
+  question.titleSlug = data.question.titleSlug;
 
   response = await getQuestionDetails(question.titleSlug);
   if (response.status != 200) {
@@ -54,7 +54,7 @@ export default async function handler(
   let details = await response.json();
 
   details = details.data.question;
-  question.content = details.translatedContent;
+  question.content = details.content;
   question.frontedId = details.questionFrontendId;
   question.difficulty = emoji[details.difficulty];
 
@@ -67,7 +67,7 @@ export default async function handler(
   question.tags = topicTags.join(" ");
 
   const caption =
-    "<b>leetcode.cn " +
+    "<b>leetcode.com " +
     question.date +
     "</b>\n" +
     "<b>" +
@@ -95,11 +95,11 @@ export default async function handler(
       inline_keyboard: [
         [
           {
-            text: "来源",
+            text: "Source",
             url: question.sourceLink,
           },
           {
-            text: "答案",
+            text: "Solution",
             url: question.solutionLink,
           },
         ],

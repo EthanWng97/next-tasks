@@ -1,8 +1,7 @@
 import CloudConvert from "cloudconvert";
+import envs from "@/envs";
 
-const CLOUDCONVERT_API_KEY: string = process.env.CLOUDCONVERT_API_KEY || "";
-
-const cloudConvert = new CloudConvert(CLOUDCONVERT_API_KEY);
+const cloudConvert = new CloudConvert(envs.value.cloudconvert.api_key);
 
 export const convertFile = async (
   inputFileName: string,

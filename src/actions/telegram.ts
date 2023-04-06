@@ -1,4 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
+import envs from "@/envs";
 
 export const sendDocument = async (
   chatId: string,
@@ -6,7 +7,7 @@ export const sendDocument = async (
   options: any,
   fileOptions: any
 ) => {
-  const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN ?? "", {
+  const bot = new TelegramBot(envs.value.telegram.bot_token ?? "", {
     polling: false,
   });
 

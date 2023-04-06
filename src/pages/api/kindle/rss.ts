@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { RssParser } from "@/utils/rss-parser";
-import { findAllDocuments, updateADocument } from "@/utils/mongodb";
-import { convertFile } from "@/utils/cloudconvert";
-import { sendEmail } from "@/utils/send-email";
+import { findAllDocuments, updateADocument } from "@/actions/mongodb";
+import { convertFile } from "@/actions/cloudconvert";
+import { sendEmail } from "@/actions/send-email";
 import axios from "axios";
 
 const RssUrl =
@@ -48,7 +48,6 @@ export default async function handler(
   });
   const unReadItemsGuid = unReadItems.map((item) => item.guid) || [];
   const allItemsGuid = Array.from(new Set([...fetchedRSS, ...unReadItemsGuid]));
-  console.log(allItemsGuid);
   const newRSS = {
     guids: allItemsGuid,
   };

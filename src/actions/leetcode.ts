@@ -1,4 +1,4 @@
-import { LEETCODE_HOST_CN, LEETCODE_HOST_EN } from "@/utils/constants";
+import constants from "@/constants";
 export const getDailyQuestionEN = async () => {
   const dailyQuestionPayload = {
     query: `query questionOfToday {
@@ -21,7 +21,10 @@ export const getDailyQuestionEN = async () => {
     },
     body: JSON.stringify(dailyQuestionPayload),
   };
-  const response = await fetch(LEETCODE_HOST_EN + "/graphql", options);
+  const response = await fetch(
+    constants.value.leetcode.host_en + "/graphql",
+    options
+  );
   return response;
 };
 
@@ -46,7 +49,10 @@ export const getDailyQuestionCN = async () => {
     },
     body: JSON.stringify(dailyQuestionPayload),
   };
-  const response = await fetch(LEETCODE_HOST_CN + "/graphql", options);
+  const response = await fetch(
+    constants.value.leetcode.host_cn + "/graphql",
+    options
+  );
   return response;
 };
 
@@ -83,6 +89,9 @@ export const getQuestionDetails = async (questionTitleSlug: string) => {
     },
     body: JSON.stringify(detailsPayload),
   };
-  const response = await fetch(LEETCODE_HOST_CN + "/graphql", options);
+  const response = await fetch(
+    constants.value.leetcode.host_cn + "/graphql",
+    options
+  );
   return response;
 };

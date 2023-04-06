@@ -1,4 +1,5 @@
 import nodemailer, { Transporter } from "nodemailer";
+import envs from "@/envs";
 
 export const sendEmail = async (
   fromEmail: string,
@@ -13,8 +14,8 @@ export const sendEmail = async (
     port: 465,
     secure: true,
     auth: {
-      user: process.env.GOOGLE_ACCOUNT,
-      pass: process.env.GOOGLE_APP_PASSWORD,
+      user: envs.value.google.account,
+      pass: envs.value.google.app_password,
     },
   });
 
