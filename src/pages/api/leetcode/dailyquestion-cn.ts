@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDailyQuestionCN, getQuestionDetails } from "@/actions/leetcode";
 import { sendDocument } from "@/actions/telegram";
-import { LEETCODE_HOST_CN } from "@/utils/constants";
+import constants from "@/constants";
 
 type ResponseError = {
   code: number;
@@ -36,7 +36,8 @@ export default async function handler(
 
   question.date = data.date;
   question.titleSlug = data.question.titleSlug;
-  question.sourceLink = LEETCODE_HOST_CN + "/problems/" + question.titleSlug;
+  question.sourceLink =
+    constants.value.leetcode.host_cn + "/problems/" + question.titleSlug;
   question.solutionLink = question.sourceLink + "solution";
 
   response = await getQuestionDetails(question.titleSlug);
