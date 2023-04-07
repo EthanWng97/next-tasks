@@ -13,3 +13,14 @@ export const sendDocument = async (
 
   await bot.sendDocument(chatId, document, options, fileOptions);
 };
+export const sendMessage = async (
+  chatId: string,
+  text: string,
+  options: any
+) => {
+  const bot = new TelegramBot(envs.value.telegram.bot_token ?? "", {
+    polling: false,
+  });
+
+  await bot.sendMessage(chatId, text, options);
+};
