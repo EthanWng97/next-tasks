@@ -12,7 +12,8 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tasks": "node src/tasks.js"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
@@ -24,6 +25,7 @@
     "cloudconvert": "^2.3.1",
     "eslint": "8.37.0",
     "eslint-config-next": "13.3.0",
+    "glob": "^9.3.4",
     "mongodb": "^5.2.0",
     "next": "13.3.0",
     "node-telegram-bot-api": "^0.61.0",

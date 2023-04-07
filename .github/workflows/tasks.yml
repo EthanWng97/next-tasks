@@ -2,7 +2,7 @@ name: Run tasks
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: "*/5 * * * *"
 
 jobs:
   run-tasks:
@@ -14,10 +14,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run tasks.js
-        run: node src/tasks.js
+      - name: Run tasks
+        run: node run tasks
