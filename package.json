@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
     "prepare": "husky install",
-    "tasks": "node tasks.js"
+    "tasks": "node src/tasks.js"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
