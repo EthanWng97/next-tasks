@@ -6,6 +6,9 @@ let value = {
   telegram: {
     bot_token: env.TELEGRAM_BOT_TOKEN,
   },
+  telegraph: {
+    access_token: env.TELEGRAPH_ACCESS_TOKEN,
+  },
   cloudconvert: {
     api_key: env.CLOUDCONVERT_API_KEY,
   },
@@ -15,6 +18,9 @@ let value = {
   },
   mongodb: {
     uri: env.MONGODB_URI,
+  },
+  redis: {
+    url: env.REDIS_URL,
   },
 };
 
