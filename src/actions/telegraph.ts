@@ -60,7 +60,7 @@ export async function createPage(node: any, title: string) {
         access_token: envs.value.telegraph.access_token,
         title: title,
         content: JSON.stringify(node),
-        return_content: true,
+        return_content: false,
       },
       {
         headers: {
