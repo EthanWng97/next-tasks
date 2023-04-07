@@ -4,8 +4,10 @@ import {
   getQuestionDetails,
   updateLastUpdateItem,
 } from "@/actions/leetcode";
-import { sendDocument } from "@/actions/telegram";
+import { sendMessage } from "@/actions/telegram";
 import constants from "@/constants";
+import { htmlToNode, createPage } from "@/actions/telegraph";
+import envs from "@/envs";
 
 type ResponseError = {
   code: number;
@@ -70,6 +72,15 @@ export default async function handler(
   });
   question.tags = topicTags.join(" ");
 
+  // creat telegraph page
+  let telegraphPage = "";
+  const node = htmlToNode(question.content);
+  const page = await createPage(node, question.titleSlug);
+  if (page !== null) {
+    telegraphPage = page.data.result.url;
+  }
+  question.difficulty = `<a href="${telegraphPage}">${question.difficulty}</a>`;
+
   const caption =
     "<b>leetcode.com " +
     question.date +
@@ -83,17 +94,7 @@ export default async function handler(
     "<strong>🏷️ Tags\n</strong>" +
     question.tags;
 
-  const buff = Buffer.from(question.content, "utf-8");
-
-  const fileOptions = {
-    // Explicitly specify the file name.
-    filename: question.frontedId + "." + question.titleSlug + ".html",
-    // Explicitly specify the MIME type.
-    contentType: "text/html",
-  };
-
   const sendOptions = {
-    caption: caption,
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [
@@ -111,13 +112,7 @@ export default async function handler(
     },
   };
 
-  await sendDocument(
-    process.env.TELEGRAM_LEETCODE_CHAT_ID ?? "",
-    buff,
-    sendOptions,
-    fileOptions
-  );
-  console.log(question.sourceLink);
+  await sendMessage(envs.value.leetcode.telegram_chat_id, caption, sendOptions);
   updateLastUpdateItem(question.sourceLink, "en");
 
   res.status(200).json(question);
