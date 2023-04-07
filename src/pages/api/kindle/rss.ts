@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { RssParser } from "@/utils/rss-parser";
-import { findAllDocuments, updateADocument } from "@/actions/mongodb";
 import { convertFile } from "@/actions/cloudconvert";
 import { sendEmail } from "@/actions/send-email";
+import { updateFetchedRss, checkForRssUpdates } from "@/actions/rss";
 import axios from "axios";
 
 const RssUrl =
@@ -12,14 +11,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const feed = await RssParser.parseURL(RssUrl);
-
-  let fetchedRSS = await findAllDocuments("rss_items");
-  fetchedRSS = fetchedRSS[0]?.guids || [];
-  const unReadItems = feed.items.filter((item: any) => {
-    if (item?.categories?.includes("Podcast")) return false;
-    return !fetchedRSS?.includes(item.guid);
-  });
+  const unReadItems = await checkForRssUpdates(RssUrl);
+  if (unReadItems.length === 0) {
+    // TODO: customize return meesage
+    return res.status(200).json({ name: "John Doe" });
+  }
   unReadItems.map(async (item) => {
     const inputFileName = item.title + ".html";
     const inputFileContent = item.content || "";
@@ -27,6 +23,7 @@ export default async function handler(
     const file = await convertFile(
       inputFileName,
       inputFileContent,
+      "epub",
       outputFileName
     );
     if (file === null) {
@@ -46,15 +43,7 @@ export default async function handler(
       fileData
     );
   });
-  const unReadItemsGuid = unReadItems.map((item) => item.guid) || [];
-  const allItemsGuid = Array.from(new Set([...fetchedRSS, ...unReadItemsGuid]));
-  const newRSS = {
-    guids: allItemsGuid,
-  };
-  const filter = {
-    guids: fetchedRSS,
-  };
-  updateADocument("rss_items", filter, newRSS);
+  await updateFetchedRss(unReadItems);
 
   res.status(200).json({ name: "John Doe" });
 }

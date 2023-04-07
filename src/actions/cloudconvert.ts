@@ -6,6 +6,7 @@ const cloudConvert = new CloudConvert(envs.value.cloudconvert.api_key);
 export const convertFile = async (
   inputFileName: string,
   inputFileContent: string,
+  inputFileType: string,
   outputFileName: string
 ) => {
   try {
@@ -19,7 +20,7 @@ export const convertFile = async (
         "convert-my-file": {
           operation: "convert",
           input: "import-my-file",
-          output_format: "epub",
+          output_format: inputFileType,
           filename: outputFileName,
         },
         "export-my-file": {

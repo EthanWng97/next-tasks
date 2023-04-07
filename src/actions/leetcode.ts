@@ -1,4 +1,5 @@
 import constants from "@/constants";
+import { findAllDocuments, updateADocument } from "@/actions/mongodb";
 export const getDailyQuestionEN = async () => {
   const dailyQuestionPayload = {
     query: `query questionOfToday {
@@ -94,4 +95,22 @@ export const getQuestionDetails = async (questionTitleSlug: string) => {
     options
   );
   return response;
+};
+export const getLastUpdateItem = async () => {
+  let lastUpdateItem = await findAllDocuments("leetcode");
+  console.log(lastUpdateItem);
+  // fetchedRSS = fetchedRSS[0]?.guids || [];
+  // return fetchedRSS;
+};
+export const updateLastUpdateItem = async (newLink: string, host: string) => {
+  const lastUpdateItem = await getLastUpdateItem();
+  const newItem = {
+    cn: "",
+    en: "",
+  };
+  const filter = {
+    guids: "",
+  };
+  // const filter = lastUpdateItem;
+  await updateADocument("leetcode", filter, newItem);
 };

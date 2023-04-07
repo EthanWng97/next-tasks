@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getDailyQuestionEN, getQuestionDetails } from "@/actions/leetcode";
+import {
+  getDailyQuestionEN,
+  getQuestionDetails,
+  updateLastUpdateItem,
+} from "@/actions/leetcode";
 import { sendDocument } from "@/actions/telegram";
 import constants from "@/constants";
 
@@ -113,6 +117,8 @@ export default async function handler(
     sendOptions,
     fileOptions
   );
+  console.log(question.sourceLink);
+  updateLastUpdateItem(question.sourceLink, "en");
 
   res.status(200).json(question);
 }
