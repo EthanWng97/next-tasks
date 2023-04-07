@@ -96,21 +96,3 @@ export const getQuestionDetails = async (questionTitleSlug: string) => {
   );
   return response;
 };
-export const getLastUpdateItem = async () => {
-  let lastUpdateItem = await findAllDocuments("leetcode");
-  console.log(lastUpdateItem);
-  // fetchedRSS = fetchedRSS[0]?.guids || [];
-  // return fetchedRSS;
-};
-export const updateLastUpdateItem = async (newLink: string, host: string) => {
-  const lastUpdateItem = await getLastUpdateItem();
-  const newItem = {
-    cn: "",
-    en: "",
-  };
-  const filter = {
-    guids: "",
-  };
-  // const filter = lastUpdateItem;
-  await updateADocument("leetcode", filter, newItem);
-};

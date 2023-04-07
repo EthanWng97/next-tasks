@@ -1,13 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import {
-  getDailyQuestionEN,
-  getQuestionDetails,
-  updateLastUpdateItem,
-} from "@/actions/leetcode";
+import { getDailyQuestionEN, getQuestionDetails } from "@/actions/leetcode";
 import { sendMessage } from "@/actions/telegram";
 import constants from "@/constants";
 import { htmlToNode, createPage } from "@/actions/telegraph";
 import envs from "@/envs";
+import redis from "@/actions/redis";
 
 type ResponseError = {
   code: number;
@@ -44,6 +41,15 @@ export default async function handler(
   question.sourceLink = constants.value.leetcode.host_en + data.link;
   question.solutionLink = question.sourceLink + "solution";
   question.titleSlug = data.question.titleSlug;
+
+  // check if the question is already updated
+  const lastUpdateItem = await redis.get("leetcode/dailyquestion-en");
+  if (question.titleSlug == lastUpdateItem) {
+    return res.status(200).json({
+      code: 200,
+      message: `Already updated. lastUpdateItem: ${lastUpdateItem}`,
+    });
+  }
 
   response = await getQuestionDetails(question.titleSlug);
   if (response.status != 200) {
@@ -113,7 +119,7 @@ export default async function handler(
   };
 
   await sendMessage(envs.value.leetcode.telegram_chat_id, caption, sendOptions);
-  updateLastUpdateItem(question.sourceLink, "en");
+  redis.set("leetcode/dailyquestion-en", question.titleSlug);
 
   res.status(200).json(question);
 }

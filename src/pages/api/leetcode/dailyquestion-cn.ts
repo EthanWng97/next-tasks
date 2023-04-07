@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDailyQuestionCN, getQuestionDetails } from "@/actions/leetcode";
-import { sendDocument } from "@/actions/telegram";
+import { sendMessage } from "@/actions/telegram";
 import constants from "@/constants";
+import { htmlToNode, createPage } from "@/actions/telegraph";
+import envs from "@/envs";
+import redis from "@/actions/redis";
 
 type ResponseError = {
   code: number;
@@ -40,6 +43,15 @@ export default async function handler(
     constants.value.leetcode.host_cn + "/problems/" + question.titleSlug;
   question.solutionLink = question.sourceLink + "solution";
 
+  // check if the question is already updated
+  const lastUpdateItem = await redis.get("leetcode/dailyquestion-cn");
+  if (question.titleSlug == lastUpdateItem) {
+    return res.status(200).json({
+      code: 200,
+      message: `Already updated. lastUpdateItem: ${lastUpdateItem}`,
+    });
+  }
+
   response = await getQuestionDetails(question.titleSlug);
   if (response.status != 200) {
     res
@@ -67,6 +79,15 @@ export default async function handler(
   });
   question.tags = topicTags.join(" ");
 
+  // creat telegraph page
+  let telegraphPage = "";
+  const node = htmlToNode(question.content);
+  const page = await createPage(node, question.titleSlug);
+  if (page !== null) {
+    telegraphPage = page.data.result.url;
+  }
+  question.difficulty = `<a href="${telegraphPage}">${question.difficulty}</a>`;
+
   const caption =
     "<b>leetcode.cn " +
     question.date +
@@ -79,15 +100,6 @@ export default async function handler(
     "</b>\n\n" +
     "<strong>🏷️ Tags\n</strong>" +
     question.tags;
-
-  const buff = Buffer.from(question.content, "utf-8");
-
-  const fileOptions = {
-    // Explicitly specify the file name.
-    filename: question.frontedId + "." + question.titleSlug + ".html",
-    // Explicitly specify the MIME type.
-    contentType: "text/html",
-  };
 
   const sendOptions = {
     caption: caption,
@@ -108,12 +120,8 @@ export default async function handler(
     },
   };
 
-  await sendDocument(
-    process.env.TELEGRAM_LEETCODE_CHAT_ID ?? "",
-    buff,
-    sendOptions,
-    fileOptions
-  );
+  await sendMessage(envs.value.leetcode.telegram_chat_id, caption, sendOptions);
+  redis.set("leetcode/dailyquestion-cn", question.titleSlug);
 
   res.status(200).json(question);
 }
