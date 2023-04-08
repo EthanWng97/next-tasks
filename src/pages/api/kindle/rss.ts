@@ -18,10 +18,10 @@ export default async function handler(
       message: `No unReadItems`,
     });
   }
-  unReadItems.map(async (item: any) => {
+  for (const item of unReadItems) {
     const inputFileContent = item.content || "";
     const outputFileName = item.title + ".epub";
-    await htmlToEpub(item.title, inputFileContent);
+    await htmlToEpub(item.title || "", inputFileContent);
     const fileData = fs.createReadStream("/tmp/output.epub");
     sendEmail(
       "navepnow@gmail.com",
@@ -31,7 +31,7 @@ export default async function handler(
       outputFileName,
       fileData
     );
-  });
+  }
   await updateFetchedRss(unReadItems);
 
   res.status(200).json({ name: "John Doe" });

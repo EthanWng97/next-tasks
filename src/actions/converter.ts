@@ -23,7 +23,6 @@ const getLanguage = (title: string) => {
   return englishCount >= chineseCount ? "en" : "zh";
 };
 export const htmlToEpub = async (title: string, content: string) => {
-  console.log(getLanguage(title));
   const options = {
     title: title,
     description: title,
@@ -35,7 +34,7 @@ export const htmlToEpub = async (title: string, content: string) => {
         beforeToc: true,
       },
     ],
-    output: "path/to/output.epub",
+    tempDir: "/tmp",
   };
   const output = "/tmp/output.epub";
   const epub = new EPub(options, output);
