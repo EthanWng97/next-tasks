@@ -1,5 +1,5 @@
 import { RssParser } from "@/utils/rss-parser";
-import { findAllDocuments, updateADocument } from "@/actions/mongodb";
+import redis from "@/actions/redis";
 
 export const checkForRssUpdates = async (RssUrl: string) => {
   const feed = await RssParser.parseURL(RssUrl);
@@ -12,8 +12,8 @@ export const checkForRssUpdates = async (RssUrl: string) => {
 };
 
 export const getFetchRss = async () => {
-  let fetchedRSS = await findAllDocuments("rss_items");
-  fetchedRSS = fetchedRSS[0]?.guids || [];
+  let response = await redis.get("kindle/rss");
+  const fetchedRSS = response ? JSON.parse(response) : [];
   return fetchedRSS;
 };
 
@@ -21,11 +21,5 @@ export const updateFetchedRss = async (unReadItems: any) => {
   const fetchedRSS = await getFetchRss();
   const unReadItemsGuid = unReadItems.map((item: any) => item.guid) || [];
   const allItemsGuid = Array.from(new Set([...fetchedRSS, ...unReadItemsGuid]));
-  const newRSS = {
-    guids: allItemsGuid,
-  };
-  const filter = {
-    guids: fetchedRSS,
-  };
-  await updateADocument("rss_items", filter, newRSS);
+  redis.set("kindle/rss", JSON.stringify(allItemsGuid));
 };

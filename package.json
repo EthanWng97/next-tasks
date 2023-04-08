@@ -16,6 +16,7 @@
     "tasks": "node src/tasks.js"
   },
   "dependencies": {
+    "@lesjoursfr/html-to-epub": "^3.1.3",
     "@types/axios": "^0.14.0",
     "@types/nodemailer": "^6.4.7",
     "@types/react": "18.0.33",
