@@ -1,5 +1,5 @@
 import { RssParser } from "@/utils/rss-parser";
-import redis from "@/actions/redis";
+import redis from "@/lib/redis";
 
 export const checkForRssUpdates = async (RssUrl: string) => {
   const feed = await RssParser.parseURL(RssUrl);

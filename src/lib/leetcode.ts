@@ -1,5 +1,4 @@
 import constants from "@/constants";
-import { findAllDocuments, updateADocument } from "@/actions/mongodb";
 export const getDailyQuestionEN = async () => {
   const dailyQuestionPayload = {
     query: `query questionOfToday {

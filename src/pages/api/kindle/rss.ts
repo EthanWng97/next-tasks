@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { sendEmail } from "@/actions/send-email";
-import { updateFetchedRss, checkForRssUpdates } from "@/actions/rss";
-import { htmlToEpub } from "@/actions/converter";
+import { sendEmail } from "@/lib/send-email";
+import { updateFetchedRss, checkForRssUpdates } from "@/lib/rss";
+import { htmlToEpub } from "@/lib/converter";
 import fs from "fs";
 
 const RssUrl =

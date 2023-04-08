@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getDailyQuestionEN, getQuestionDetails } from "@/actions/leetcode";
-import { sendMessage } from "@/actions/telegram";
+import { getDailyQuestionEN, getQuestionDetails } from "@/lib/leetcode";
+import { sendMessage } from "@/lib/telegram";
 import constants from "@/constants";
-import { htmlToNode, createPage } from "@/actions/telegraph";
+import { htmlToNode, createPage } from "@/lib/telegraph";
 import envs from "@/envs";
-import redis from "@/actions/redis";
+import redis from "@/lib/redis";
 
 type ResponseError = {
   code: number;
