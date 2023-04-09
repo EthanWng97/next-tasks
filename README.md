@@ -51,7 +51,7 @@ If you'd like to contribute to Next Tasks, please follow these steps:
 
 ## License
 
-Next.js Task Runner is licensed under the MIT License. See the LICENSE file for more information.
+Next Task is licensed under the MIT License. See the LICENSE file for more information.
 
 ## Contact
 
