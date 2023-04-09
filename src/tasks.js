@@ -1,8 +1,11 @@
 const glob = require("glob");
 const path = require("path");
 const axios = require("axios");
+const dotenv = require("dotenv");
+dotenv.config();
 
-const HOST = "https://next-scripts.vercel.app";
+const HOST = process.env.VERCEL_HOST;
+
 function getApiRoutes() {
   const apiRoutes = glob
     .sync("**/*.ts", { cwd: path.join(__dirname, "pages/api") })
