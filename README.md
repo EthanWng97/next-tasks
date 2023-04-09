@@ -1,8 +1,7 @@
 <h1 align="center">Next Tasks</h1>
 
-[![CodeFactor](https://www.codefactor.io/repository/github/navepnow/next-scripts/badge)](https://www.codefactor.io/repository/github/navepnow/next-scripts)
-[![DeepScan grade](https://deepscan.io/api/teams/20904/projects/24381/branches/749514/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20904&pid=24381&bid=749514)
-
+[![CodeFactor](https://www.codefactor.io/repository/github/navepnow/next-tasks/badge)](https://www.codefactor.io/repository/github/navepnow/next-tasks)
+[![DeepScan grade](https://deepscan.io/api/teams/20904/projects/24382/branches/749531/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20904&pid=24382&bid=749531)
 ## Introduction
 
 Next Tasks is a project that allows you to define and run tasks using Next.js API routes and GitHub Actions. With this project, you can automate a variety of tasks, such as:
