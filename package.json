@@ -39,11 +39,15 @@
   "devDependencies": {
     "@types/node": "^18.15.11",
     "@types/node-telegram-bot-api": "^0.61.6",
+    "autoprefixer": "^10.4.14",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.0",
     "install": "^0.13.0",
     "ioredis": "^5.3.1",
     "npm": "^9.6.4",
-    "prettier": "2.8.7"
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "tailwindcss": "^3.3.1"
   }
 }
