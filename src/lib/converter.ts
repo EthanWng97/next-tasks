@@ -42,7 +42,7 @@ export const htmlToEpub = async (title: string, content: string) => {
     await epub.render();
     console.log("Ebook Generated Successfully!");
   } catch (err) {
-    console.error("Failed to generate Ebook because of ", err);
+    throw err;
   }
 };
 

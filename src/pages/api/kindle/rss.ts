@@ -14,25 +14,33 @@ export default async function handler(
   const unReadItems = await checkForRssUpdates(RssUrl);
   if (unReadItems.length === 0) {
     return res.status(200).json({
-      code: 200,
-      message: `No unReadItems`,
+      message: `No unread items`,
     });
   }
   for (const item of unReadItems) {
-    const inputFileContent = item.content || "";
-    const outputFileName = item.title + ".epub";
-    await htmlToEpub(item.title || "", inputFileContent);
-    const fileData = fs.createReadStream("/tmp/output.epub");
-    sendEmail(
-      "navepnow@gmail.com",
-      "yifwang@kindle.com",
-      "test",
-      "test",
-      outputFileName,
-      fileData
-    );
+    try {
+      const inputFileContent = item.content || "";
+      const outputFileName = item.title + ".epub";
+      await htmlToEpub(item.title || "", inputFileContent);
+      const fileData = fs.createReadStream("/tmp/output.epub");
+      await sendEmail(
+        "navepnow@gmail.com",
+        "yifwang@kindle.com",
+        "test",
+        "test",
+        outputFileName,
+        fileData
+      );
+    } catch (err) {
+      return res.status(500).json({
+        message: `Error: ${err}`,
+      });
+    }
   }
   await updateFetchedRss(unReadItems);
 
-  res.status(200).json({ name: "John Doe" });
+  res.status(200).json({
+    message: "send unread items successfully",
+    data: unReadItems.map((item) => ({ title: item.title, link: item.link })),
+  });
 }
