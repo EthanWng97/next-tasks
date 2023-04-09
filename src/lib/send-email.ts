@@ -1,6 +1,12 @@
 import nodemailer, { Transporter } from "nodemailer";
 import envs from "@/envs";
 
+class EmailSendError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "EmailSendError";
+  }
+}
 export const sendEmail = async (
   fromEmail: string,
   toEmail: string,
@@ -36,6 +42,6 @@ export const sendEmail = async (
     const info = await transporter.sendMail(mailOptions);
     console.log("Email sent: %s", info.accepted);
   } catch (err) {
-    throw err;
+    throw new EmailSendError(`Failed to send email: ${err}`);
   }
 };

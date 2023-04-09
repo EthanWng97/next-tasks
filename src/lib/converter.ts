@@ -2,6 +2,13 @@ import { EPub } from "@lesjoursfr/html-to-epub";
 import CloudConvert from "cloudconvert";
 import envs from "@/envs";
 
+class FileConvertError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "FileConvertError";
+  }
+}
+
 const isChinese = (char: string) => {
   const regex = /^[\u4E00-\u9FFF\u3400-\u4DFF]+$/;
   return regex.test(char);
@@ -42,7 +49,7 @@ export const htmlToEpub = async (title: string, content: string) => {
     await epub.render();
     console.log("Ebook Generated Successfully!");
   } catch (err) {
-    throw err;
+    throw new FileConvertError(`Failed to convert file: ${err}`);
   }
 };
 
