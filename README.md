@@ -1,42 +1,63 @@
-<h1 align="center">Evan Scripts</h1>
+<h1 align="center">Next Tasks</h1>
 
-[![](https://img.shields.io/github/stars/NavePnow/Profiles.svg?logo=github&color=lightgrey)](https://github.com/NavePnow/Profiles)
-[![](https://img.shields.io/github/forks/NavePnow/Profiles.svg?logo=github&color=lightgrey)](https://github.com/NavePnow/Profiles)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/NavePnow)
+[![CodeFactor](https://www.codefactor.io/repository/github/navepnow/next-scripts/badge)](https://www.codefactor.io/repository/github/navepnow/next-scripts)
+[![DeepScan grade](https://deepscan.io/api/teams/20904/projects/24381/branches/749514/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20904&pid=24381&bid=749514)
 
-## Roadmap :blue_car:
+## Introduction
 
-- replace Google Apps Scripts by Vercel Serveless Functions to deploy scripts
-- cleanup README.md
+Next Tasks is a project that allows you to define and run tasks using Next.js API routes and GitHub Actions. With this project, you can automate a variety of tasks, such as:
 
-## Author
+- Sending RSS feeds to Kindle
+- Pushing LeetCode daily questions to a Telegram channel
+- Running database queries and updating records
+- Generating reports and sending them via email
+- And much more!
 
-👤 **Evan**
+## Roadmap
 
-- Twitter: [@NavePnow](https://twitter.com/NavePnow)
-- Github: [@NavePnow](https://github.com/NavePnow)
+- [ ] Store RSS link at Redis instead of env
+  - Update configuration to use Redis for storing RSS links
+  - Refactor code to retrieve RSS links from Redis
 
-## 🤝 Contributing
+- [ ] Handle errors and return messages for LeetCode daily question
+  - Implement error handling for failed requests to LeetCode API
+  - Return informative error messages to users
 
-Contributions, issues and feature requests are welcome!
-Feel free to check [issues page](https://github.com/NavePnow/Profiles/issues).
+- [ ] Customize front page
+  - Create a custom design for the front page
+  - Add additional features and information to the front page
 
-## 💰 Show your support
+- [ ] Use UI interface to control subscribed RSS links
+  - Develop a user interface for managing RSS subscriptions
+  - Allow users to add, edit, and delete RSS links through the interface
 
-Give a ⭐️ if this project helped you!
+## Getting Started
 
-| PayPal                                                                                                                                                                               | Patron                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DSZJCN4ZUEW74&currency_code=USD&source=url) | <a href="https://www.patreon.com/NavePnow"> <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"> </a> |
+To get started with Next Tasks, follow these steps:
 
-## 🙏 鸣谢
+1. Clone the repository
+2. Install the dependencies using `npm install`
+3. Configure the API routes to perform the desired tasks
+4. Set up the GitHub Actions workflow to trigger the API routes
+5. Run the workflow to execute the tasks
 
-- Instructor：[Neurogram](https://github.com/Neurogram-R), [wangfei021325](https://t.me/wangfei021325)
+## Contributing
 
-## 📝 License
+If you'd like to contribute to Next Tasks, please follow these steps:
 
----
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
 
-Copyright © 2020 [Evan](https://github.com/NavePnow).
+## License
+
+Next.js Task Runner is licensed under the MIT License. See the LICENSE file for more information.
+
+## Contact
+
+If you have any questions or comments about Next Tasks, please feel free to contact us at <yifwang@duck.com>. We'd love to hear from you!
+
+Copyright © 2023 [Evan](https://github.com/NavePnow).
 This project is [MIT](https://github.com/NavePnow/Profiles/blob/master/LICENSE) licensed.
+
