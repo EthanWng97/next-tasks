@@ -2,16 +2,14 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { sendEmail } from "@/lib/send-email";
 import { updateFetchedRss, checkForRssUpdates } from "@/lib/rss";
 import { htmlToEpub } from "@/lib/converter";
+import envs from "@/envs";
 import fs from "fs";
-
-const RssUrl =
-  "https://www.inoreader.com/stream/user/1005137674/tag/user-favorites";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const unReadItems = await checkForRssUpdates(RssUrl);
+  const unReadItems = await checkForRssUpdates(envs.value.rss.url);
   if (unReadItems.length === 0) {
     return res.status(200).json({
       message: `No unread items`,

@@ -5,7 +5,8 @@ export const checkForRssUpdates = async (RssUrl: string) => {
   const feed = await RssParser.parseURL(RssUrl);
   const fetchedRSS = await getFetchRss();
   const unReadItems = feed.items.filter((item: any) => {
-    if (item?.categories?.includes("Podcast")) return false;
+    if (item && item.enclosure && item.enclosure.type.includes("audio"))
+      return false;
     return !fetchedRSS?.includes(item.guid);
   });
   return unReadItems;

@@ -22,6 +22,9 @@ let value = {
   redis: {
     url: env.REDIS_URL,
   },
+  rss: {
+    url: env.RSS_URL,
+  },
 };
 
 const envs = {
