@@ -17,11 +17,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-      
+
       - name: Use variables
         run: |
           echo "repository variable : ${{ env.VERCEL_HOST }}"
-
 
       - name: Install dependencies
         run: npm install

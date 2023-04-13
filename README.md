@@ -2,6 +2,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/navepnow/next-tasks/badge)](https://www.codefactor.io/repository/github/navepnow/next-tasks)
 [![DeepScan grade](https://deepscan.io/api/teams/20904/projects/24382/branches/749531/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20904&pid=24382&bid=749531)
+
 ## Introduction
 
 Next Tasks is a project that allows you to define and run tasks using Next.js API routes and GitHub Actions. With this project, you can automate a variety of tasks, such as:
@@ -15,14 +16,17 @@ Next Tasks is a project that allows you to define and run tasks using Next.js AP
 ## Roadmap
 
 - [ ] Store RSS link at Redis instead of env
+
   - Update configuration to use Redis for storing RSS links
   - Refactor code to retrieve RSS links from Redis
 
 - [ ] Handle errors and return messages for LeetCode daily question
+
   - Implement error handling for failed requests to LeetCode API
   - Return informative error messages to users
 
 - [ ] Customize front page
+
   - Create a custom design for the front page
   - Add additional features and information to the front page
 
@@ -59,4 +63,3 @@ If you have any questions or comments about Next Tasks, please feel free to cont
 
 Copyright © 2023 [Evan](https://github.com/NavePnow).
 This project is [MIT](https://github.com/NavePnow/Profiles/blob/master/LICENSE) licensed.
-
