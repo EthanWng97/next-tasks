@@ -6,7 +6,7 @@ import axios from "axios";
 class OnePointThreeAcresError extends Error {
   constructor(message: string) {
     super(message);
-    this.name = "FileConvertError";
+    this.name = "OnePointThreeAcresError";
   }
 }
 
@@ -14,7 +14,10 @@ export const checkin = async () => {
   try {
     const response = await axios.post(
       constants.value["1point3acres"].api_host + "/api/users/checkin",
-      {},
+      {
+        todaysay: "测试中",
+        qdxq: "kx",
+      },
       {
         headers: {
           "Content-Type": "application/json; charset=utf-8",
