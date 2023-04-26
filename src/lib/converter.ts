@@ -33,7 +33,7 @@ export const htmlToEpub = async (title: string, content: string) => {
   const options = {
     title: title,
     description: title,
-    language: getLanguage(title),
+    lang: getLanguage(title),
     content: [
       {
         title: title,
