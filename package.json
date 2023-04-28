@@ -38,7 +38,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/node": "^18.16.1",
+    "@types/node": "^18.16.2",
     "@types/node-telegram-bot-api": "^0.61.6",
     "autoprefixer": "^10.4.14",
     "eslint-config-prettier": "^8.8.0",
