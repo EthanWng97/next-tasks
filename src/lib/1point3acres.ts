@@ -10,13 +10,13 @@ class OnePointThreeAcresError extends Error {
   }
 }
 
-export const checkin = async () => {
+export const checkin = async (todaysay: string, emoji: string) => {
   try {
     const response = await axios.post(
       constants.value["1point3acres"].api_host + "/api/users/checkin",
       {
-        todaysay: "测试中",
-        qdxq: "kx",
+        todaysay,
+        qdxq: emoji,
       },
       {
         headers: {

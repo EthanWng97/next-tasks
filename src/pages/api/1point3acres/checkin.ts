@@ -6,8 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const response = await checkin();
-    console.log(response.data);
+    const response = await checkin("测试中", "kx");
 
     res.status(200).json(response.data);
   } catch (err) {
