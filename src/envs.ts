@@ -1,7 +1,7 @@
 let env = process.env;
 let value = {
   "1point3acres": {
-    authorization: env["1POINT3ACRES_AUTHORIZATION"],
+    authorization: env.ONEPOINTTHREEACRES_AUTHORIZATION,
   },
   leetcode: {
     telegram_chat_id: env.LEETCODE_TELEGRAM_CHAT_ID,
