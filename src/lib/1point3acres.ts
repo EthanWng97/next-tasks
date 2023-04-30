@@ -1,4 +1,4 @@
-import DailyQuestion from "../../public/1point3acres/daily-question.json";
+// import DailyQuestion from "../../public/1point3acres/daily-question.json";
 import constants from "@/constants";
 import envs from "@/envs";
 import axios from "axios";
@@ -11,6 +11,8 @@ class OnePointThreeAcresError extends Error {
 }
 
 export const checkin = async (todaysay: string, emoji: string) => {
+  console.log(constants.value["1point3acres"].api_host + "/api/users/checkin");
+  console.log(envs.value["1point3acres"].authorization);
   try {
     const response = await axios.post(
       constants.value["1point3acres"].api_host + "/api/users/checkin",
