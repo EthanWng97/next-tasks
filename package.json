@@ -25,7 +25,7 @@
     "cheerio": "^1.0.0-rc.12",
     "cloudconvert": "^2.3.2",
     "dotenv": "^16.0.3",
-    "eslint": "8.40.0",
+    "eslint": "8.42.0",
     "eslint-config-next": "13.4.2",
     "glob": "^10.2.5",
     "mongodb": "^5.5.0",
