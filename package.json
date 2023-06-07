@@ -29,7 +29,7 @@
     "eslint-config-next": "13.4.2",
     "glob": "^10.2.5",
     "mongodb": "^5.5.0",
-    "next": "13.4.2",
+    "next": "13.4.4",
     "node-telegram-bot-api": "^0.61.0",
     "nodemailer": "^6.9.2",
     "react": "18.2.0",
