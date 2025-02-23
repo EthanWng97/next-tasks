@@ -120,9 +120,8 @@ export async function handler() {
     } finally {
         // 确保 Redis 连接关闭
         console.log("🛑 Closing Redis connection...");
-        await redis.quit();
+        await redis.disconnect();
         console.log("👋 Task completed.");
-        process.exit(0); // 确保脚本退出
     }
 }
 
