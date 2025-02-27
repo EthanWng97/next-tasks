@@ -3,10 +3,12 @@ import { sendMessage } from "../../lib/telegram";
 import constants from "../../constants";
 import { htmlToNode, createPage } from "../..//lib/telegraph";
 import envs from "../../envs";
-import redis from "../../lib/redis";
+import Redis from "ioredis";
 
 export async function handler() {
     console.log("🚀 Starting LeetCode daily question task...");
+
+    const redis = new Redis(envs.value.redis.url);
 
     const question = {
         date: "",
@@ -120,7 +122,7 @@ export async function handler() {
     } finally {
         // 确保 Redis 连接关闭
         console.log("🛑 Closing Redis connection...");
-        await redis.disconnect();
+        await redis.quit();
         console.log("👋 Task completed.");
     }
 }
